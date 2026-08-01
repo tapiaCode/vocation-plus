@@ -9,25 +9,44 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelector('.nav-links');
   
   if (mobileMenuBtn && navLinks) {
-    mobileMenuBtn.addEventListener('click', () => {
-      // Very basic mobile menu toggle for now
-      // In a real implementation, we'd use a proper full-screen modal or slide-out menu
-      if (navLinks.style.display === 'flex') {
-        navLinks.style.display = 'none';
-      } else {
-        navLinks.style.display = 'flex';
-        navLinks.style.flexDirection = 'column';
-        navLinks.style.position = 'absolute';
-        navLinks.style.top = '80px';
-        navLinks.style.left = '0';
-        navLinks.style.width = '100%';
-        navLinks.style.backgroundColor = 'rgba(255,255,255,0.95)';
-        navLinks.style.backdropFilter = 'blur(10px)';
-        navLinks.style.padding = '2rem';
-        navLinks.style.boxShadow = '0 10px 15px -3px rgba(0,0,0,0.1)';
+    mobileMenuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      navLinks.classList.toggle('active');
+      const icon = mobileMenuBtn.querySelector('i');
+      if (icon) {
+        if (navLinks.classList.contains('active')) {
+          icon.className = 'ph-bold ph-x';
+        } else {
+          icon.className = 'ph-bold ph-list';
+        }
+      }
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+        navLinks.classList.remove('active');
+        const icon = mobileMenuBtn.querySelector('i');
+        if (icon) icon.className = 'ph-bold ph-list';
       }
     });
   }
+
+  // Accordion Item Toggle (For Guía del Bachiller)
+  const accordionHeaders = document.querySelectorAll('.accordion-header');
+  accordionHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.parentElement;
+      const isOpen = item.classList.contains('active');
+      
+      // Close all accordions in same group if desired, or allow multi-open
+      document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
+      
+      if (!isOpen) {
+        item.classList.add('active');
+      }
+    });
+  });
 
   // Initialize GSAP Animations
   if (typeof gsap !== 'undefined') {

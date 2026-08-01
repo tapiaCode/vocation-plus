@@ -241,8 +241,125 @@ body {
 }
 
 @media (max-width: 900px) {
-  .nav-links, .header-cta { display: none; }
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(16px);
+    padding: var(--space-xl) var(--space-lg);
+    gap: var(--space-lg);
+    box-shadow: 0 20px 40px rgba(10, 37, 64, 0.15);
+    border-bottom: 1px solid var(--color-outline);
+    transform: translateY(-150%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 99;
+  }
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
   .mobile-menu-btn { display: block; }
+}
+
+/* Team & About Section Styles */
+.team-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-outline-variant);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  text-align: center;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+.team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-outline);
+}
+.team-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface-container);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  margin: 0 auto var(--space-md);
+  border: 2px solid var(--color-outline-variant);
+}
+
+/* Accordion / Guide Styles */
+.accordion-item {
+  background: var(--color-surface);
+  border: 1px solid var(--color-outline-variant);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-md);
+  overflow: hidden;
+}
+.accordion-header {
+  padding: var(--space-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font: var(--text-headline-md);
+  background: var(--color-surface);
+  border: none;
+  width: 100%;
+  text-align: left;
+  color: var(--color-text-main);
+}
+.accordion-header:hover {
+  background: var(--color-surface-container);
+}
+.accordion-content {
+  padding: 0 var(--space-lg) var(--space-lg);
+  display: none;
+  color: var(--color-text-muted);
+}
+.accordion-item.active .accordion-content {
+  display: block;
+}
+
+/* Interview / Quote Card Styles */
+.interview-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-outline-variant);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.interview-quote {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--color-text-main);
+  margin-bottom: var(--space-lg);
+}
+.interview-author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+.interview-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-primary-container);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
 }
 
 /* Premium Layout Components */

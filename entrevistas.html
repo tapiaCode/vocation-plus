@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experiencias Universitarias | vocation+</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon"><i class="ph-bold ph-compass"></i></div>
+        <span class="logo-text">vocation+</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="carreras.html" class="nav-link">Carreras</a>
+        <a href="universidades.html" class="nav-link">Universidades</a>
+        <a href="recursos.html" class="nav-link active">Recursos</a>
+        <a href="nosotros.html" class="nav-link">Nosotros</a>
+      </nav>
+      <div class="header-cta">
+        <a href="test.html" class="btn btn-primary btn-pill">Realizar Test</a>
+      </div>
+      <button class="mobile-menu-btn"><i class="ph-bold ph-list"></i></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" style="background-color: var(--color-surface-container); padding-top: calc(80px + var(--space-3xl)); padding-bottom: var(--space-3xl);">
+      <div class="container text-center gsap-fade-in">
+        <a href="recursos.html" class="btn btn-outline btn-pill" style="margin-bottom: var(--space-md); font-size: 13px;"><i class="ph-bold ph-arrow-left"></i> Volver a Recursos</a>
+        <h1 class="display-lg">Experiencias y Voces Universitarias</h1>
+        <p class="body-lg" style="max-width: 650px; margin: var(--space-md) auto 0;">
+          Testimonios reales de estudiantes de cursos superiores y profesionales recién graduados en Santa Cruz de la Sierra.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-cols-2 gap-xl gsap-stagger-container">
+          
+          <!-- Testimonio 1 -->
+          <div class="interview-card gsap-stagger-item">
+            <div>
+              <div class="chip" style="margin-bottom: var(--space-md);">Ingeniería de Sistemas • UAGRM</div>
+              <p class="interview-quote">
+                "Al salir de la secundaria me preocupaba si la programación era demasiado difícil. En la UAGRM comprendí que la clave es la perseverancia y la lógica. Las startups en Santa Cruz están buscando talento local constantemente."
+              </p>
+            </div>
+            <div class="interview-author">
+              <div class="interview-avatar">CG</div>
+              <div>
+                <strong style="display: block; color: var(--color-text-main);">Carlos Gutiérrez</strong>
+                <span class="body-md" style="font-size: 14px;">Estudiante de 5to año</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonio 2 -->
+          <div class="interview-card gsap-stagger-item">
+            <div>
+              <div class="chip" style="margin-bottom: var(--space-md);">Administración de Empresas • UPSA</div>
+              <p class="interview-quote">
+                "El networking que haces en la universidad define gran parte de tus oportunidades laborales. Recomiendo participar en las ferias empresariales y proyectos integradores desde el primer semestre."
+              </p>
+            </div>
+            <div class="interview-author">
+              <div class="interview-avatar">MR</div>
+              <div>
+                <strong style="display: block; color: var(--color-text-main);">Mariana Roca</strong>
+                <span class="body-md" style="font-size: 14px;">Graduada & Emprendedora</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonio 3 -->
+          <div class="interview-card gsap-stagger-item">
+            <div>
+              <div class="chip" style="margin-bottom: var(--space-md);">Medicina • UCEBOL</div>
+              <p class="interview-quote">
+                "Medicina exige disciplina total. Las guardias y las prácticas clínicas te conectan con la realidad social de Santa Cruz. Es una carrera pesada pero extremadamente gratificante."
+              </p>
+            </div>
+            <div class="interview-author">
+              <div class="interview-avatar">MJ</div>
+              <div>
+                <strong style="display: block; color: var(--color-text-main);">Mateo Justiniano</strong>
+                <span class="body-md" style="font-size: 14px;">Interno de Medicina</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonio 4 -->
+          <div class="interview-card gsap-stagger-item">
+            <div>
+              <div class="chip" style="margin-bottom: var(--space-md);">Derecho • UCB</div>
+              <p class="interview-quote">
+                "Estudiar Derecho no es solo memorizar leyes, es aprender a analizar conflictos y buscar soluciones éticas. La universidad nos prepara con salas de audiencia simuladas desde 3er semestre."
+              </p>
+            </div>
+            <div class="interview-author">
+              <div class="interview-avatar">SV</div>
+              <div>
+                <strong style="display: block; color: var(--color-text-main);">Sofía Vaca</strong>
+                <span class="body-md" style="font-size: 14px;">Estudiante de 4to año</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 vocation+. Proyecto Educativo BTH - Santa Cruz de la Sierra, Bolivia.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
