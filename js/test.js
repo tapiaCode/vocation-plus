@@ -168,17 +168,15 @@ let currentQuestionIndex = 0;
 let scores = { ENG: 0, HEA: 0, BUS: 0, SOC: 0, ART: 0 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  const startBtn = document.getElementById("startBtn");
-  const restartBtn = document.getElementById("restartBtn");
-  const startScreen = document.getElementById("startScreen");
-  const quizScreen = document.getElementById("quizScreen");
-  const resultsScreen = document.getElementById("resultsScreen");
+  const startBtn = document.getElementById("start-btn");
+  const startScreen = document.getElementById("intro-container");
+  const quizScreen = document.getElementById("quiz-container");
+  const resultsScreen = document.getElementById("result-container");
   
-  const questionText = document.getElementById("questionText");
-  const optionsContainer = document.getElementById("optionsContainer");
-  const questionCounter = document.getElementById("questionCounter");
-  const progressBar = document.getElementById("progressBar");
-  const progressPercentage = document.getElementById("progressPercentage");
+  const questionText = document.getElementById("question-text");
+  const optionsContainer = document.getElementById("options-container");
+  const questionCounter = document.getElementById("question-counter");
+  const progressBar = document.getElementById("progress-bar");
   
   startBtn.addEventListener("click", () => {
     // GSAP Out Start Screen
@@ -195,20 +193,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  restartBtn.addEventListener("click", () => {
-    currentQuestionIndex = 0;
-    scores = { ENG: 0, HEA: 0, BUS: 0, SOC: 0, ART: 0 };
-    gsap.to(resultsScreen, {
-      opacity: 0,
-      duration: 0.4,
-      onComplete: () => {
-        resultsScreen.style.display = "none";
-        startScreen.style.display = "flex";
-        gsap.to(startScreen, { opacity: 1, y: 0, duration: 0.4 });
-      }
-    });
-  });
-
   function loadQuestion() {
     const q = questions[currentQuestionIndex];
     questionText.textContent = q.text;
@@ -216,7 +200,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Update Progress
     const progress = ((currentQuestionIndex) / questions.length) * 100;
     progressBar.style.width = `${progress}%`;
-    progressPercentage.textContent = `${Math.round(progress)}%`;
     questionCounter.textContent = `Pregunta ${currentQuestionIndex + 1} de ${questions.length}`;
 
     // Render Options
@@ -266,7 +249,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function showResults() {
     // Progress bar to 100%
     progressBar.style.width = "100%";
-    progressPercentage.textContent = "100%";
     
     gsap.to(quizScreen, {
       opacity: 0,
@@ -286,14 +268,8 @@ document.addEventListener("DOMContentLoaded", () => {
         
         const result = categoryData[winnerCat];
         
-        document.getElementById("resultCategory").textContent = result.title;
-        document.getElementById("resultDesc").textContent = result.desc;
-        
-        const careersContainer = document.getElementById("resultCareers");
-        careersContainer.innerHTML = "";
-        result.careers.forEach(c => {
-          careersContainer.innerHTML += `<span class="chip">${c}</span>`;
-        });
+        document.getElementById("result-career").textContent = result.title;
+        document.getElementById("result-desc").textContent = result.desc;
         
         resultsScreen.style.display = "flex";
         gsap.fromTo(resultsScreen, { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.6, ease: "back.out(1.2)" });
