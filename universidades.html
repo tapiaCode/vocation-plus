@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universidades en Santa Cruz | vocation+</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .uni-card {
+      padding: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .uni-image {
+      height: 240px;
+      width: 100%;
+    }
+    .uni-content {
+      padding: var(--space-lg);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .uni-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 13px;
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-md);
+      font-weight: 500;
+    }
+    .uni-feature-list {
+      margin-block: var(--space-lg);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .uni-feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .uni-feature-item i {
+      color: var(--color-secondary);
+      margin-top: 2px;
+      font-size: 18px;
+    }
+  </style>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon"><i class="ph-bold ph-compass"></i></div>
+        <span class="logo-text">vocation+</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="carreras.html" class="nav-link">Carreras</a>
+        <a href="universidades.html" class="nav-link active">Universidades</a>
+        <a href="recursos.html" class="nav-link">Recursos</a>
+      </nav>
+      <div class="header-cta">
+        <a href="test.html" class="btn btn-primary btn-pill">Realizar Test</a>
+      </div>
+      <button class="mobile-menu-btn"><i class="ph-bold ph-list"></i></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" style="background-color: var(--color-surface-container); padding-top: calc(80px + var(--space-3xl)); padding-bottom: var(--space-2xl);">
+      <div class="container text-center gsap-fade-in">
+        <h1 class="display-lg">Campus Santa Cruz</h1>
+        <p class="body-lg" style="max-width: 600px; margin: var(--space-md) auto 0;">Información verificada de las instituciones de educación superior más destacadas de la región.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-cols-2 gap-xl gsap-stagger-container">
+          
+          <!-- UAGRM -->
+          <div class="card uni-card gsap-stagger-item">
+            <div class="uni-image">
+              <img src="/home/jtapia/.gemini/antigravity/brain/e437eda3-35ba-499c-aec8-f30f85ce43fc/uni_campus_1_1785555755595.jpg" alt="Campus UAGRM" class="image-cover">
+            </div>
+            <div class="uni-content">
+              <div class="uni-meta"><i class="ph-fill ph-map-pin"></i> Av. Busch, Ciudad Universitaria</div>
+              <h3 class="headline-md" style="margin-bottom: var(--space-sm);">Universidad Autónoma Gabriel René Moreno (UAGRM)</h3>
+              <p class="body-md">Es la universidad pública más grande y tradicional de Santa Cruz, con gran prestigio histórico y autonomía institucional.</p>
+              
+              <div class="uni-feature-list">
+                <div class="uni-feature-item"><i class="ph-bold ph-check-circle"></i> Mayor población estudiantil y oferta académica de la región.</div>
+                <div class="uni-feature-item"><i class="ph-bold ph-check-circle"></i> Matrícula y educación de costo accesible (pública).</div>
+                <div class="uni-feature-item"><i class="ph-bold ph-check-circle"></i> Fuerte influencia social y política en la región.</div>
+              </div>
+              
+              <a href="https://www.uagrm.edu.bo/" target="_blank" class="btn btn-outline btn-pill" style="margin-top: auto; width: 100%;">Visitar Sitio Oficial</a>
+            </div>
+          </div>
+          
+          <!-- UPSA -->
+          <div class="card uni-card gsap-stagger-item">
+            <div class="uni-image">
+              <img src="/home/jtapia/.gemini/antigravity/brain/e437eda3-35ba-499c-aec8-f30f85ce43fc/uni_campus_2_1785555807331.jpg" alt="Campus UPSA" class="image-cover">
+            </div>
+            <div class="uni-content">
+              <div class="uni-meta"><i class="ph-fill ph-map-pin"></i> Av. Paraguá y 4to. Anillo</div>
+              <h3 class="headline-md" style="margin-bottom: var(--space-sm);">Universidad Privada de Santa Cruz de la Sierra (UPSA)</h3>
+              <p class="body-md">Universidad privada de alto prestigio, fundada por la CAINCO, con un enfoque fuertemente orientado al sector empresarial.</p>
+              
+              <div class="uni-feature-list">
+                <div class="uni-feature-item"><i class="ph-bold ph-check-circle"></i> Estrecho vínculo con el sector empresarial e industrial.</div>
+                <div class="uni-feature-item"><i class="ph-bold ph-check-circle"></i> Infraestructura moderna y de alta calidad.</div>
+                <div class="uni-feature-item"><i class="ph-bold ph-check-circle"></i> Altísima tasa de empleabilidad para sus graduados.</div>
+              </div>
+              
+              <a href="https://www.upsa.edu.bo/" target="_blank" class="btn btn-outline btn-pill" style="margin-top: auto; width: 100%;">Visitar Sitio Oficial</a>
+            </div>
+          </div>
+          
+          <!-- UCB -->
+          <div class="card uni-card gsap-stagger-item">
+            <div class="uni-image">
+              <img src="/home/jtapia/.gemini/antigravity/brain/e437eda3-35ba-499c-aec8-f30f85ce43fc/uni_campus_3_1785555819007.jpg" alt="Campus UCB" class="image-cover">
+            </div>
+            <div class="uni-content">
+              <div class="uni-meta"><i class="ph-fill ph-map-pin"></i> Km 9, Carretera al Norte</div>
+              <h3 class="headline-md" style="margin-bottom: var(--space-sm);">Universidad Católica Boliviana "San Pablo" (UCB)</h3>
+              <p class="body-md">Universidad de gran prestigio a nivel nacional con sólidos valores ético-cristianos y un alto nivel de exigencia académica.</p>
+              
+              <div class="uni-feature-list">
+                <div class="uni-feature-item"><i class="ph-bold ph-check-circle"></i> Formación integral basada en valores humanistas.</div>
+                <div class="uni-feature-item"><i class="ph-bold ph-check-circle"></i> Reconocimiento internacional y amplios programas de intercambio.</div>
+                <div class="uni-feature-item"><i class="ph-bold ph-check-circle"></i> Fuerte orientación a la investigación y calidad docente.</div>
+              </div>
+              
+              <a href="https://scz.ucb.edu.bo/" target="_blank" class="btn btn-outline btn-pill" style="margin-top: auto; width: 100%;">Visitar Sitio Oficial</a>
+            </div>
+          </div>
+          
+          <!-- UTEPSA -->
+          <div class="card uni-card gsap-stagger-item">
+            <div class="uni-image">
+              <img src="/home/jtapia/.gemini/antigravity/brain/e437eda3-35ba-499c-aec8-f30f85ce43fc/uni_campus_1_1785555755595.jpg" alt="Campus UTEPSA" class="image-cover">
+            </div>
+            <div class="uni-content">
+              <div class="uni-meta"><i class="ph-fill ph-map-pin"></i> 3er Anillo Interno esq. Av. San Aurelio</div>
+              <h3 class="headline-md" style="margin-bottom: var(--space-sm);">Universidad Tecnológica Privada de Santa Cruz (UTEPSA)</h3>
+              <p class="body-md">Institución con un fuerte enfoque tecnológico y práctico, orientada a formar profesionales emprendedores.</p>
+              
+              <div class="uni-feature-list">
+                <div class="uni-feature-item"><i class="ph-bold ph-check-circle"></i> Fomento activo al espíritu emprendedor.</div>
+                <div class="uni-feature-item"><i class="ph-bold ph-check-circle"></i> Modalidades y horarios flexibles para trabajadores.</div>
+                <div class="uni-feature-item"><i class="ph-bold ph-check-circle"></i> Programas de graduación continua integrados.</div>
+              </div>
+              
+              <a href="https://www.utepsa.edu/" target="_blank" class="btn btn-outline btn-pill" style="margin-top: auto; width: 100%;">Visitar Sitio Oficial</a>
+            </div>
+          </div>
+          
+          <!-- UPDS -->
+          <div class="card uni-card gsap-stagger-item">
+            <div class="uni-image">
+              <img src="/home/jtapia/.gemini/antigravity/brain/e437eda3-35ba-499c-aec8-f30f85ce43fc/uni_campus_2_1785555807331.jpg" alt="Campus UPDS" class="image-cover">
+            </div>
+            <div class="uni-content">
+              <div class="uni-meta"><i class="ph-fill ph-map-pin"></i> 3er. Anillo Interno, Esq. Av. Beni</div>
+              <h3 class="headline-md" style="margin-bottom: var(--space-sm);">Universidad Privada Domingo Savio (UPDS)</h3>
+              <p class="body-md">Parte de la red universitaria privada más grande de Bolivia, con un innovador sistema de estudio modular.</p>
+              
+              <div class="uni-feature-list">
+                <div class="uni-feature-item"><i class="ph-bold ph-check-circle"></i> Sistema de aprendizaje por módulos (una materia a la vez).</div>
+                <div class="uni-feature-item"><i class="ph-bold ph-check-circle"></i> Red universitaria con presencia a nivel nacional.</div>
+                <div class="uni-feature-item"><i class="ph-bold ph-check-circle"></i> Enfoque inclusivo y de alta accesibilidad económica.</div>
+              </div>
+              
+              <a href="https://www.upds.edu.bo/" target="_blank" class="btn btn-outline btn-pill" style="margin-top: auto; width: 100%;">Visitar Sitio Oficial</a>
+            </div>
+          </div>
+          
+          <!-- UCEBOL -->
+          <div class="card uni-card gsap-stagger-item">
+            <div class="uni-image">
+              <img src="/home/jtapia/.gemini/antigravity/brain/e437eda3-35ba-499c-aec8-f30f85ce43fc/uni_campus_3_1785555819007.jpg" alt="Campus UCEBOL" class="image-cover">
+            </div>
+            <div class="uni-content">
+              <div class="uni-meta"><i class="ph-fill ph-map-pin"></i> Av. Cristo Redentor Km 6 1/2</div>
+              <h3 class="headline-md" style="margin-bottom: var(--space-sm);">Universidad Cristiana de Bolivia (UCEBOL)</h3>
+              <p class="body-md">Primera universidad privada de Santa Cruz, con una sólida reputación en el área de Ciencias de la Salud.</p>
+              
+              <div class="uni-feature-list">
+                <div class="uni-feature-item"><i class="ph-bold ph-check-circle"></i> Alto enfoque y prestigio en carreras de la salud.</div>
+                <div class="uni-feature-item"><i class="ph-bold ph-check-circle"></i> Clínica odontológica y clínica universitaria propias.</div>
+                <div class="uni-feature-item"><i class="ph-bold ph-check-circle"></i> Entorno multicultural con alta presencia internacional.</div>
+              </div>
+              
+              <a href="https://www.ucebol.edu.bo/" target="_blank" class="btn btn-outline btn-pill" style="margin-top: auto; width: 100%;">Visitar Sitio Oficial</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 vocation+. Proyecto Educativo Santa Cruz, Bolivia.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

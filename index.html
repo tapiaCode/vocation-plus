@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vocation+ | Descubre tu Futuro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon"><i class="ph-bold ph-compass"></i></div>
+        <span class="logo-text">vocation+</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link active">Inicio</a>
+        <a href="carreras.html" class="nav-link">Carreras</a>
+        <a href="universidades.html" class="nav-link">Universidades</a>
+        <a href="recursos.html" class="nav-link">Recursos</a>
+      </nav>
+      <div class="header-cta">
+        <a href="test.html" class="btn btn-primary btn-pill">Realizar Test</a>
+      </div>
+      <button class="mobile-menu-btn"><i class="ph-bold ph-list"></i></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Giant Statement Hero -->
+    <section class="hero-giant">
+      <!-- We use absolute path to ensure we point to the artifact, but typically we'd copy it. 
+           Let's use the local path we generated in the artifact dir, or I can copy it to the workspace.
+           Actually, the tools generated images in the artifact dir. Let's reference them directly using the absolute path. -->
+      <div class="hero-giant-bg">
+        <img src="/home/jtapia/.gemini/antigravity/brain/e437eda3-35ba-499c-aec8-f30f85ce43fc/hero_premium_editorial_1785555685212.jpg" alt="Estudiantes universitarios" class="image-cover">
+      </div>
+      <div class="container relative">
+        <div class="hero-giant-content gsap-fade-in">
+          <div class="label-md" style="margin-bottom: var(--space-md); color: var(--color-secondary); opacity: 0.9;">Orientación Vocacional Bolivia</div>
+          <h1 class="display-giant" style="margin-bottom: var(--space-lg); color: #fff;">Descubre tu <br>verdadera pasión.</h1>
+          <p class="body-lg" style="color: rgba(255,255,255,0.8); margin-bottom: var(--space-xl); font-size: 1.25rem;">
+            No dejes tu futuro al azar. Explora las mejores universidades de Santa Cruz, comprende las demandas del mercado laboral boliviano y toma la decisión correcta con nuestro test vocacional avanzado.
+          </p>
+          <div class="flex gap-md">
+            <a href="test.html" class="btn btn-secondary btn-pill" style="font-size: 16px; padding: 16px 32px;">Empezar Test Gratuito</a>
+            <a href="carreras.html" class="btn btn-outline btn-pill" style="color: white; border-color: rgba(255,255,255,0.3); font-size: 16px; padding: 16px 32px;">Explorar Carreras</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Asymmetric Editorial Block -->
+    <section class="section" style="background-color: var(--color-surface-container);">
+      <div class="container">
+        <div class="grid grid-cols-2 gap-xl items-center gsap-fade-in">
+          <div style="padding-right: var(--space-xl);">
+            <div class="label-md text-muted" style="margin-bottom: var(--space-md);">El Problema</div>
+            <h2 class="display-lg" style="margin-bottom: var(--space-lg);">7 de cada 10 estudiantes dudan de su elección.</h2>
+            <p class="body-lg" style="margin-bottom: var(--space-lg);">
+              La falta de información clara sobre el mercado laboral y la presión social son las principales causas de deserción universitaria en los primeros semestres. Vocation+ existe para cerrar esa brecha de información con datos reales y verificados de las instituciones cruceñas.
+            </p>
+            <a href="recursos.html" class="btn btn-outline btn-pill">Leer nuestro manifiesto</a>
+          </div>
+          <div style="border-radius: var(--radius-xl); overflow: hidden; height: 600px; box-shadow: var(--shadow-lg);">
+            <img src="/home/jtapia/.gemini/antigravity/brain/e437eda3-35ba-499c-aec8-f30f85ce43fc/uni_campus_3_1785555819007.jpg" alt="Campus universitario" class="image-cover">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bento Grid Metrics / Value Prop -->
+    <section class="section">
+      <div class="container text-center gsap-fade-in" style="margin-bottom: var(--space-2xl);">
+        <h2 class="headline-lg">Por qué elegir vocation+</h2>
+      </div>
+      <div class="container">
+        <div class="grid grid-cols-3 gap-md gsap-stagger-container">
+          
+          <div class="card gsap-stagger-item" style="background-color: var(--color-primary-container); color: white; border: none;">
+            <i class="ph-bold ph-brain" style="font-size: 48px; color: var(--color-secondary); margin-bottom: var(--space-md);"></i>
+            <h3 class="headline-md" style="margin-bottom: var(--space-sm);">Test de Alta Precisión</h3>
+            <p class="body-md" style="color: rgba(255,255,255,0.7);">Evaluación de 20 preguntas basada en las 5 macro-áreas del conocimiento, diseñada para perfiles bolivianos.</p>
+          </div>
+          
+          <div class="card gsap-stagger-item">
+            <i class="ph-bold ph-buildings" style="font-size: 48px; color: var(--color-primary); margin-bottom: var(--space-md);"></i>
+            <h3 class="headline-md" style="margin-bottom: var(--space-sm);">Datos Reales</h3>
+            <p class="body-md">Información verificada de las 6 principales universidades de Santa Cruz: UAGRM, UPSA, UTEPSA, UPDS, UCB y UCEBOL.</p>
+          </div>
+          
+          <div class="card gsap-stagger-item" style="background-color: var(--color-surface-container); border: none;">
+            <i class="ph-bold ph-briefcase" style="font-size: 48px; color: var(--color-tertiary); margin-bottom: var(--space-md);"></i>
+            <h3 class="headline-md" style="margin-bottom: var(--space-sm);">Mercado Laboral</h3>
+            <p class="body-md">Análisis de la demanda real, habilidades requeridas y proyecciones para las carreras más populares en Bolivia.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="grid grid-cols-2 gap-xl" style="margin-bottom: var(--space-xl);">
+        <div>
+          <a href="index.html" class="logo" style="color: white; margin-bottom: var(--space-lg);">
+            <div class="logo-icon"><i class="ph-bold ph-compass"></i></div>
+            <span class="logo-text">vocation+</span>
+          </a>
+          <p class="body-md" style="color: rgba(255,255,255,0.6); max-width: 300px;">
+            Plataforma digital educativa para orientar a los estudiantes de Santa Cruz de la Sierra en la elección de su carrera profesional.
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 vocation+. Proyecto Educativo Santa Cruz, Bolivia.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

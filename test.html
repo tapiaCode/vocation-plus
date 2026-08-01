@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Vocacional | vocation+</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    body {
+      background-color: var(--color-surface-container); /* Soft background for test app feel */
+    }
+    
+    .test-app-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: var(--color-surface);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-lg);
+      padding: var(--space-2xl) var(--space-xl);
+      min-height: 500px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    #progress-container {
+      width: 100%;
+      height: 6px;
+      background: var(--color-outline-variant);
+      border-radius: var(--radius-pill);
+      margin-bottom: var(--space-xl);
+      overflow: hidden;
+    }
+    
+    #progress-bar {
+      height: 100%;
+      background: var(--color-primary);
+      width: 0%;
+      transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .question-title {
+      font: var(--text-headline-md);
+      margin-bottom: var(--space-xl);
+      text-align: center;
+    }
+    
+    .options-grid {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+      margin-bottom: var(--space-xl);
+    }
+    
+    .option-btn {
+      padding: 16px 24px;
+      border: 1px solid var(--color-outline);
+      background: transparent;
+      border-radius: var(--radius-md);
+      font: var(--text-body-lg);
+      color: var(--color-text-main);
+      text-align: left;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .option-btn:hover {
+      border-color: var(--color-primary);
+      background-color: rgba(10, 37, 64, 0.03);
+      transform: translateY(-1px);
+    }
+    
+    .option-btn i {
+      color: var(--color-primary);
+      font-size: 20px;
+    }
+    
+    #result-container {
+      text-align: center;
+    }
+    
+    .result-icon {
+      font-size: 64px;
+      color: var(--color-secondary);
+      margin-bottom: var(--space-md);
+    }
+    
+    .result-career {
+      font: var(--text-display-lg);
+      color: var(--color-primary);
+      margin-bottom: var(--space-md);
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon"><i class="ph-bold ph-compass"></i></div>
+        <span class="logo-text">vocation+</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="carreras.html" class="nav-link">Carreras</a>
+        <a href="universidades.html" class="nav-link">Universidades</a>
+        <a href="recursos.html" class="nav-link">Recursos</a>
+      </nav>
+      <button class="mobile-menu-btn"><i class="ph-bold ph-list"></i></button>
+    </div>
+  </header>
+
+  <main style="padding-top: calc(80px + var(--space-2xl)); padding-bottom: var(--space-4xl); min-height: 100vh; display: flex; align-items: center;">
+    <div class="container">
+      
+      <div id="intro-container" class="test-app-container text-center">
+        <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div class="logo-icon" style="width: 64px; height: 64px; font-size: 32px; margin-bottom: var(--space-lg);"><i class="ph-bold ph-brain"></i></div>
+          <h1 class="display-lg" style="margin-bottom: var(--space-md);">Descubre tu perfil ideal</h1>
+          <p class="body-lg" style="margin-bottom: var(--space-xl); max-width: 400px; margin-inline: auto;">Este test consta de 20 preguntas diseñadas para identificar tus fortalezas y afinidades en base a las 5 grandes áreas del conocimiento.</p>
+          <button id="start-btn" class="btn btn-primary btn-pill" style="font-size: 18px; padding: 18px 40px; width: 100%; max-width: 300px;">Comenzar Test</button>
+        </div>
+      </div>
+
+      <div id="quiz-container" class="test-app-container" style="display: none;">
+        <div id="progress-container">
+          <div id="progress-bar"></div>
+        </div>
+        <p id="question-counter" class="label-md text-muted text-center" style="margin-bottom: var(--space-sm);">Pregunta 1 de 20</p>
+        <h2 id="question-text" class="question-title">Cargando pregunta...</h2>
+        
+        <div id="options-container" class="options-grid">
+          <!-- Opciones inyectadas por JS -->
+        </div>
+      </div>
+
+      <div id="result-container" class="test-app-container" style="display: none; justify-content: center;">
+        <i class="ph-fill ph-check-circle result-icon"></i>
+        <div class="label-md" style="margin-bottom: var(--space-sm);">Tu perfil ideal es</div>
+        <h2 id="result-career" class="result-career">Arquitectura</h2>
+        <p id="result-desc" class="body-lg" style="margin-bottom: var(--space-xl);">Basado en tus respuestas, tienes una fuerte inclinación por el diseño y la creatividad espacial.</p>
+        
+        <div class="flex gap-md justify-center">
+          <a href="carreras.html" class="btn btn-primary btn-pill">Ver carreras afines</a>
+          <button onclick="location.reload()" class="btn btn-outline btn-pill">Repetir Test</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="js/test.js"></script>
+</body>
+</html>
