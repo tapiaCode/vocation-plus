@@ -3,152 +3,285 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Test Vocacional | vocation+</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Test Vocacional BTH | vocation+</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <!-- Canvas Confetti CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <style>
     body {
-      background-color: var(--color-surface-container); /* Soft background for test app feel */
+      background: radial-gradient(circle at 50% 10%, #0F1C33 0%, #070E1B 100%);
+      color: #FFFFFF;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
     }
-    
-    .test-app-container {
-      max-width: 600px;
+
+    /* Ambient Floating Academic Elements */
+    .bg-floating-element {
+      position: absolute;
+      pointer-events: none;
+      z-index: 1;
+      color: rgba(255, 255, 255, 0.08);
+      font-size: clamp(40px, 6vw, 90px);
+      filter: blur(1px);
+      animation: floatMotion 8s ease-in-out infinite alternate;
+    }
+
+    .bg-float-1 { top: 12%; left: 8%; animation-delay: 0s; }
+    .bg-float-2 { top: 20%; right: 10%; animation-delay: 1.5s; color: rgba(13, 148, 136, 0.18); }
+    .bg-float-3 { bottom: 15%; left: 12%; animation-delay: 3s; color: rgba(217, 119, 6, 0.18); }
+    .bg-float-4 { bottom: 22%; right: 14%; animation-delay: 4.5s; }
+    .bg-float-5 { top: 48%; left: 4%; animation-delay: 2s; }
+    .bg-float-6 { top: 55%; right: 5%; animation-delay: 3.5s; }
+
+    @keyframes floatMotion {
+      0% { transform: translateY(0) rotate(0deg) scale(1); }
+      50% { transform: translateY(-20px) rotate(6deg) scale(1.05); }
+      100% { transform: translateY(10px) rotate(-4deg) scale(0.98); }
+    }
+
+    /* Test App Container Glassmorphism */
+    .test-app-shell {
+      position: relative;
+      z-index: 10;
+      max-width: 760px;
       margin: 0 auto;
-      background: var(--color-surface);
+      background: rgba(15, 28, 51, 0.75);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
       border-radius: var(--radius-xl);
-      box-shadow: var(--shadow-lg);
+      box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.12);
       padding: var(--space-2xl) var(--space-xl);
-      min-height: 500px;
+      min-height: 560px;
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      transition: all var(--transition-normal);
     }
-    
-    #progress-container {
+
+    @media (max-width: 640px) {
+      .test-app-shell {
+        padding: var(--space-xl) var(--space-md);
+        min-height: 480px;
+        margin-inline: 8px;
+      }
+    }
+
+    /* Progress & Badges */
+    .progress-bar-track {
       width: 100%;
-      height: 6px;
-      background: var(--color-outline-variant);
+      height: 10px;
+      background: rgba(255, 255, 255, 0.1);
       border-radius: var(--radius-pill);
-      margin-bottom: var(--space-xl);
+      margin-bottom: var(--space-lg);
       overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.08);
     }
-    
+
     #progress-bar {
       height: 100%;
-      background: var(--color-primary);
-      width: 0%;
-      transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      background: linear-gradient(90deg, var(--color-accent-teal), #14B8A6);
+      width: 100%;
+      transform-origin: left;
+      transform: scaleX(0);
+      transition: transform 0.4s var(--ease-out);
     }
-    
+
     .question-title {
-      font: var(--text-headline-md);
+      font-family: var(--font-display);
+      font-size: clamp(1.35rem, 3vw, 1.8rem);
+      font-weight: 700;
       margin-bottom: var(--space-xl);
       text-align: center;
+      color: #FFFFFF;
+      line-height: 1.3;
     }
-    
+
     .options-grid {
       display: flex;
       flex-direction: column;
       gap: var(--space-md);
       margin-bottom: var(--space-xl);
     }
-    
-    .option-btn {
-      padding: 16px 24px;
-      border: 1px solid var(--color-outline);
-      background: transparent;
+
+    .option-card-btn {
+      padding: 20px 24px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.04);
       border-radius: var(--radius-md);
-      font: var(--text-body-lg);
-      color: var(--color-text-main);
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.95);
       text-align: left;
       cursor: pointer;
-      transition: all var(--transition-fast);
+      transition: all 0.25s var(--ease-out);
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 16px;
+      position: relative;
+      overflow: hidden;
     }
-    
-    .option-btn:hover {
-      border-color: var(--color-primary);
-      background-color: rgba(10, 37, 64, 0.03);
-      transform: translateY(-1px);
+
+    .option-card-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(13, 148, 136, 0.2), transparent);
+      opacity: 0;
+      transition: opacity 0.25s var(--ease-out);
     }
-    
-    .option-btn i {
-      color: var(--color-primary);
-      font-size: 20px;
+
+    .option-card-btn:hover {
+      border-color: var(--color-accent-teal);
+      transform: translateX(6px) translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(13, 148, 136, 0.3);
+      color: #FFFFFF;
     }
-    
-    #result-container {
-      text-align: center;
+
+    .option-card-btn:hover::before {
+      opacity: 1;
     }
-    
-    .result-icon {
-      font-size: 64px;
-      color: var(--color-secondary);
+
+    .option-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--color-accent-teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+      transition: all 0.25s var(--ease-out);
+    }
+
+    .option-card-btn:hover .option-icon-box {
+      background: var(--color-accent-teal);
+      color: #FFFFFF;
+      transform: scale(1.08);
+    }
+
+    /* Result Card Premium */
+    .result-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      border-radius: var(--radius-pill);
+      background: rgba(13, 148, 136, 0.2);
+      color: var(--color-accent-teal);
+      border: 1px solid rgba(13, 148, 136, 0.4);
+      font-weight: 700;
+      font-size: 0.9rem;
       margin-bottom: var(--space-md);
     }
-    
-    .result-career {
-      font: var(--text-display-lg);
-      color: var(--color-primary);
-      margin-bottom: var(--space-md);
+
+    .result-careers-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-block: var(--space-lg);
+    }
+
+    .result-career-chip {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
   </style>
 </head>
 <body>
-  <header class="header">
+  <!-- Ambient Floating Icons -->
+  <div class="bg-floating-element bg-float-1"><i class="ph-bold ph-graduation-cap"></i></div>
+  <div class="bg-floating-element bg-float-2"><i class="ph-bold ph-atom"></i></div>
+  <div class="bg-floating-element bg-float-3"><i class="ph-bold ph-gear-six"></i></div>
+  <div class="bg-floating-element bg-float-4"><i class="ph-bold ph-scales"></i></div>
+  <div class="bg-floating-element bg-float-5"><i class="ph-bold ph-palette"></i></div>
+  <div class="bg-floating-element bg-float-6"><i class="ph-bold ph-first-aid"></i></div>
+
+  <header class="header" style="background: rgba(7, 14, 27, 0.85); border-bottom-color: rgba(255,255,255,0.08);">
     <div class="container header-inner">
       <a href="index.html" class="logo">
-        <div class="logo-icon"><i class="ph-bold ph-compass"></i></div>
-        <span class="logo-text">vocation+</span>
+        <div class="logo-symbol" style="background: var(--color-accent-teal);"><i class="ph-bold ph-compass"></i></div>
+        <span class="logo-text text-white">vocation+</span>
       </a>
       <nav class="nav-links">
-        <a href="index.html" class="nav-link">Inicio</a>
-        <a href="carreras.html" class="nav-link">Carreras</a>
-        <a href="universidades.html" class="nav-link">Universidades</a>
-        <a href="recursos.html" class="nav-link">Recursos</a>
-        <a href="nosotros.html" class="nav-link">Nosotros</a>
+        <a href="index.html" class="nav-link text-white">Inicio</a>
+        <a href="carreras.html" class="nav-link text-white">Carreras</a>
+        <a href="universidades.html" class="nav-link text-white">Universidades</a>
+        <a href="recursos.html" class="nav-link text-white">Recursos</a>
+        <a href="nosotros.html" class="nav-link text-white">Nosotros</a>
       </nav>
-      <button class="mobile-menu-btn"><i class="ph-bold ph-list"></i></button>
+      <button class="mobile-menu-btn text-white" aria-label="Abrir menú"><i class="ph-bold ph-list"></i></button>
     </div>
   </header>
 
-  <main style="padding-top: calc(80px + var(--space-2xl)); padding-bottom: var(--space-4xl); min-height: 100vh; display: flex; align-items: center;">
-    <div class="container">
+  <main style="padding-top: calc(84px + var(--space-2xl)); padding-bottom: var(--space-4xl); min-height: 100vh; display: flex; align-items: center;">
+    <div class="container" style="position: relative; z-index: 10;">
       
-      <div id="intro-container" class="test-app-container text-center">
-        <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-          <div class="logo-icon" style="width: 64px; height: 64px; font-size: 32px; margin-bottom: var(--space-lg);"><i class="ph-bold ph-brain"></i></div>
-          <h1 class="display-lg" style="margin-bottom: var(--space-md);">Descubre tu perfil ideal</h1>
-          <p class="body-lg" style="margin-bottom: var(--space-xl); max-width: 400px; margin-inline: auto;">Este test consta de 20 preguntas diseñadas para identificar tus fortalezas y afinidades en base a las 5 grandes áreas del conocimiento.</p>
-          <button id="start-btn" class="btn btn-primary btn-pill" style="font-size: 18px; padding: 18px 40px; width: 100%; max-width: 300px;">Comenzar Test</button>
+      <!-- Start Screen -->
+      <div id="intro-container" class="test-app-shell text-center">
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <div class="logo-symbol" style="width: 80px; height: 80px; font-size: 40px; background: var(--color-accent-teal); margin-bottom: var(--space-lg);"><i class="ph-bold ph-brain"></i></div>
+          <span class="badge-tag-accent" style="margin-bottom: var(--space-xs);">Proyecto BTH 2026</span>
+          <h1 class="title-large text-white" style="margin-bottom: var(--space-sm);">Test Vocacional de Alta Precisión</h1>
+          <p class="body-lead" style="color: rgba(255,255,255,0.8); margin-bottom: var(--space-xl); max-width: 500px;">
+            20 preguntas interactivas diseñadas para identificar tus fortalezas y proyectar tu perfil ideal entre las 5 macro-áreas del conocimiento.
+          </p>
+          <button id="start-btn" class="btn btn-accent" style="font-size: 1.15rem; padding: 20px 54px;">Comenzar Evaluación <i class="ph-bold ph-arrow-right"></i></button>
         </div>
       </div>
 
-      <div id="quiz-container" class="test-app-container" style="display: none;">
-        <div id="progress-container">
+      <!-- Quiz Screen -->
+      <div id="quiz-container" class="test-app-shell" style="display: none;">
+        <div class="flex justify-between items-center" style="margin-bottom: var(--space-sm);">
+          <span id="question-counter" class="result-badge"><i class="ph-bold ph-question"></i> Pregunta 1 de 20</span>
+          <span id="progress-percent" style="font-weight: 700; font-size: 0.9rem; color: var(--color-accent-teal);">0%</span>
+        </div>
+
+        <div class="progress-bar-track">
           <div id="progress-bar"></div>
         </div>
-        <p id="question-counter" class="label-md text-muted text-center" style="margin-bottom: var(--space-sm);">Pregunta 1 de 20</p>
+
         <h2 id="question-text" class="question-title">Cargando pregunta...</h2>
         
         <div id="options-container" class="options-grid">
-          <!-- Opciones inyectadas por JS -->
+          <!-- Options injected by JS -->
         </div>
       </div>
 
-      <div id="result-container" class="test-app-container" style="display: none; justify-content: center;">
-        <i class="ph-fill ph-check-circle result-icon"></i>
-        <div class="label-md" style="margin-bottom: var(--space-sm);">Tu perfil ideal es</div>
-        <h2 id="result-career" class="result-career">Arquitectura</h2>
-        <p id="result-desc" class="body-lg" style="margin-bottom: var(--space-xl);">Basado en tus respuestas, tienes una fuerte inclinación por el diseño y la creatividad espacial.</p>
-        
-        <div class="flex gap-md justify-center">
-          <a href="carreras.html" class="btn btn-primary btn-pill">Ver carreras afines</a>
-          <button onclick="location.reload()" class="btn btn-outline btn-pill">Repetir Test</button>
+      <!-- Result Screen -->
+      <div id="result-container" class="test-app-shell" style="display: none; text-align: center;">
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <div class="result-badge"><i class="ph-bold ph-trophy"></i> Resultado de Evaluación Vocacional</div>
+          <h2 id="result-career" class="title-large text-white" style="margin-bottom: var(--space-sm); color: var(--color-accent-teal);">Ciencias e Ingeniería</h2>
+          <p id="result-desc" class="body-lead" style="color: rgba(255,255,255,0.85); margin-bottom: var(--space-lg); max-width: 580px;">
+            Tienes un perfil fuertemente orientado al análisis lógico, resolución de problemas complejos y tecnología.
+          </p>
+          
+          <div style="width: 100%; margin-bottom: var(--space-xl);">
+            <h3 class="title-small text-white" style="margin-bottom: var(--space-xs); font-size: 1rem;">Carreras Recomendadas:</h3>
+            <div id="result-careers" class="result-careers-grid">
+              <!-- Career chips injected by JS -->
+            </div>
+          </div>
+
+          <div class="flex gap-sm justify-center" style="flex-wrap: wrap;">
+            <a href="carreras.html" class="btn btn-accent"><i class="ph-bold ph-compass"></i> Ver Carreras en Santa Cruz</a>
+            <button onclick="window.print()" class="btn btn-ghost-dark"><i class="ph-bold ph-printer"></i> Imprimir Resultado</button>
+            <button onclick="location.reload()" class="btn btn-ghost-dark"><i class="ph-bold ph-arrow-counter-clockwise"></i> Repetir Test</button>
+          </div>
         </div>
       </div>
 
@@ -157,5 +290,6 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="js/test.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

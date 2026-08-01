@@ -3,10 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vocation+ | Descubre tu Futuro</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>vocation+ | Descubre tu Carrera ideal en Santa Cruz</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
@@ -14,7 +11,7 @@
   <header class="header">
     <div class="container header-inner">
       <a href="index.html" class="logo">
-        <div class="logo-icon"><i class="ph-bold ph-compass"></i></div>
+        <div class="logo-symbol"><i class="ph-bold ph-compass"></i></div>
         <span class="logo-text">vocation+</span>
       </a>
       <nav class="nav-links">
@@ -25,109 +22,126 @@
         <a href="nosotros.html" class="nav-link">Nosotros</a>
       </nav>
       <div class="header-cta">
-        <a href="test.html" class="btn btn-primary btn-pill">Realizar Test</a>
+        <a href="test.html" class="btn btn-accent">Realizar Test</a>
       </div>
-      <button class="mobile-menu-btn"><i class="ph-bold ph-list"></i></button>
+      <button class="mobile-menu-btn" aria-label="Abrir menú"><i class="ph-bold ph-list"></i></button>
     </div>
   </header>
 
   <main>
-    <!-- Giant Statement Hero -->
-    <section class="hero-giant">
-      <!-- We use absolute path to ensure we point to the artifact, but typically we'd copy it. 
-           Let's use the local path we generated in the artifact dir, or I can copy it to the workspace.
-           Actually, the tools generated images in the artifact dir. Let's reference them directly using the absolute path. -->
-      <div class="hero-giant-bg">
-        <img src="src/portada.webp" alt="Estudiantes universitarios" class="image-cover">
-      </div>
-      <div class="container relative">
-        <div class="hero-giant-content gsap-fade-in">
-          <div class="label-md" style="margin-bottom: var(--space-md); color: var(--color-secondary); opacity: 0.9;">Orientación Vocacional Bolivia</div>
-          <h1 class="display-giant" style="margin-bottom: var(--space-lg); color: #fff;">Descubre tu <br>verdadera pasión.</h1>
-          <p class="body-lg" style="color: rgba(255,255,255,0.8); margin-bottom: var(--space-xl); font-size: 1.25rem;">
-            No dejes tu futuro al azar. Explora las mejores universidades de Santa Cruz, comprende las demandas del mercado laboral boliviano y toma la decisión correcta con nuestro test vocacional avanzado.
-          </p>
-          <div class="flex gap-md">
-            <a href="test.html" class="btn btn-secondary btn-pill" style="font-size: 16px; padding: 16px 32px;">Empezar Test Gratuito</a>
-            <a href="carreras.html" class="btn btn-outline btn-pill" style="color: white; border-color: rgba(255,255,255,0.3); font-size: 16px; padding: 16px 32px;">Explorar Carreras</a>
+    <!-- Hero Editorial Section -->
+    <section class="hero-editorial">
+      <div class="container">
+        <div class="hero-editorial-grid">
+          <div class="hero-editorial-content gsap-fade-in">
+            <span class="badge-tag-accent" style="margin-bottom: var(--space-md);">Orientación Vocacional • Santa Cruz, Bolivia</span>
+            <h1 class="title-giant text-white" style="margin-bottom: var(--space-md);">Descubre tu verdadera pasión profesional.</h1>
+            <p class="body-lead" style="color: rgba(255,255,255,0.8); margin-bottom: var(--space-xl);">
+              Explora las universidades con mayor prestigio en Santa Cruz, comprende las demandas del mercado laboral actual y toma la decisión correcta para tu futuro.
+            </p>
+            <div class="flex gap-sm" style="flex-wrap: wrap;">
+              <a href="test.html" class="btn btn-accent">Iniciar Test Vocacional <i class="ph-bold ph-arrow-right"></i></a>
+              <a href="universidades.html" class="btn btn-ghost-dark">Ver Universidades</a>
+            </div>
+          </div>
+
+          <div class="hero-editorial-image gsap-fade-in">
+            <img src="src/portada.webp" alt="Estudiantes universitarios en Santa Cruz">
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Asymmetric Editorial Block -->
-    <section class="section" style="background-color: var(--color-surface-container);">
+    <!-- Editorial Feature Block -->
+    <section class="section" style="background-color: var(--color-bg-subtle);">
       <div class="container">
         <div class="grid grid-cols-2 gap-xl items-center gsap-fade-in">
-          <div style="padding-right: var(--space-xl);">
-            <div class="label-md text-muted" style="margin-bottom: var(--space-md);">El Problema</div>
-            <h2 class="display-lg" style="margin-bottom: var(--space-lg);">7 de cada 10 estudiantes dudan de su elección.</h2>
-            <p class="body-lg" style="margin-bottom: var(--space-lg);">
-              La falta de información clara sobre el mercado laboral y la presión social son las principales causas de deserción universitaria en los primeros semestres. Vocation+ existe para cerrar esa brecha de información con datos reales y verificados de las instituciones cruceñas.
+          <div>
+            <h2 class="title-large" style="margin-bottom: var(--space-md);">Toma decisiones informadas sobre tu vocación.</h2>
+            <p class="body-lead" style="margin-bottom: var(--space-lg);">
+              La elección de una carrera universitaria define tus próximos años de desarrollo personal y profesional. En vocation+ concentramos la información más completa y actualizada de la educación superior en nuestro departamento.
             </p>
-            <a href="recursos.html" class="btn btn-outline btn-pill">Leer nuestro manifiesto</a>
+            <div class="flex gap-md" style="margin-top: var(--space-lg);">
+              <div>
+                <h3 class="title-medium text-accent">6+</h3>
+                <p class="body-regular">Universidades Destacadas</p>
+              </div>
+              <div style="border-left: 1px solid var(--color-border); padding-left: var(--space-md);">
+                <h3 class="title-medium text-accent">20</h3>
+                <p class="body-regular">Preguntas de Evaluación</p>
+              </div>
+              <div style="border-left: 1px solid var(--color-border); padding-left: var(--space-md);">
+                <h3 class="title-medium text-accent">100%</h3>
+                <p class="body-regular">Información Verificada</p>
+              </div>
+            </div>
           </div>
-          <div style="border-radius: var(--radius-xl); overflow: hidden; height: 600px; box-shadow: var(--shadow-lg);">
-            <img src="src/uagrm.webp" alt="Campus universitario" class="image-cover">
+
+          <div style="border-radius: var(--radius-xl); overflow: hidden; height: 480px; box-shadow: var(--shadow-card);">
+            <img src="src/uagrm.webp" alt="Universidad en Santa Cruz" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Bento Grid Metrics / Value Prop -->
+    <!-- Grid Services / Features -->
     <section class="section">
       <div class="container text-center gsap-fade-in" style="margin-bottom: var(--space-2xl);">
-        <h2 class="headline-lg">Por qué elegir vocation+</h2>
+        <h2 class="title-large">Todo lo que necesitas en un solo lugar</h2>
+        <p class="body-lead" style="max-width: 600px; margin: var(--space-sm) auto 0;">Herramientas y guías diseñadas especialmente para bachilleres de Santa Cruz.</p>
       </div>
+
       <div class="container">
-        <div class="grid grid-cols-3 gap-md gsap-stagger-container">
+        <div class="grid grid-cols-3 gap-lg gsap-stagger-container">
           
-          <div class="card gsap-stagger-item" style="background-color: var(--color-primary-container); color: white; border: none;">
-            <i class="ph-bold ph-brain" style="font-size: 48px; color: var(--color-secondary); margin-bottom: var(--space-md);"></i>
-            <h3 class="headline-md" style="margin-bottom: var(--space-sm);">Test de Alta Precisión</h3>
-            <p class="body-md" style="color: rgba(255,255,255,0.7);">Evaluación de 20 preguntas basada en las 5 macro-áreas del conocimiento, diseñada para perfiles bolivianos.</p>
+          <div class="card-premium gsap-stagger-item">
+            <div class="logo-symbol" style="background: var(--color-accent-teal); margin-bottom: var(--space-md);"><i class="ph-bold ph-brain"></i></div>
+            <h3 class="title-small" style="margin-bottom: var(--space-xs);">Test Vocacional BTH</h3>
+            <p class="body-regular">Evaluación directa de 20 preguntas sin registro obligatorio para descubrir tus áreas afines.</p>
           </div>
-          
-          <div class="card gsap-stagger-item">
-            <i class="ph-bold ph-buildings" style="font-size: 48px; color: var(--color-primary); margin-bottom: var(--space-md);"></i>
-            <h3 class="headline-md" style="margin-bottom: var(--space-sm);">Datos Reales</h3>
-            <p class="body-md">Información verificada de las 6 principales universidades de Santa Cruz: UAGRM, UPSA, UTEPSA, UPDS, UCB y UCEBOL.</p>
+
+          <div class="card-premium gsap-stagger-item">
+            <div class="logo-symbol" style="background: var(--color-brand-dark); margin-bottom: var(--space-md);"><i class="ph-bold ph-buildings"></i></div>
+            <h3 class="title-small" style="margin-bottom: var(--space-xs);">Oferta Académica Real</h3>
+            <p class="body-regular">Información detallada de la UAGRM, UPSA, UCB, UTEPSA, UPDS y UCEBOL con ubicaciones y carreras.</p>
           </div>
-          
-          <div class="card gsap-stagger-item" style="background-color: var(--color-surface-container); border: none;">
-            <i class="ph-bold ph-briefcase" style="font-size: 48px; color: var(--color-tertiary); margin-bottom: var(--space-md);"></i>
-            <h3 class="headline-md" style="margin-bottom: var(--space-sm);">Mercado Laboral</h3>
-            <p class="body-md">Análisis de la demanda real, habilidades requeridas y proyecciones para las carreras más populares en Bolivia.</p>
+
+          <div class="card-premium gsap-stagger-item">
+            <div class="logo-symbol" style="background: var(--color-accent-amber); margin-bottom: var(--space-md);"><i class="ph-bold ph-book-bookmark"></i></div>
+            <h3 class="title-small" style="margin-bottom: var(--space-xs);">Guías del Bachiller</h3>
+            <p class="body-regular">Requisitos de inscripción, exámenes de suficiencia académica (PSA/PAB) y becas disponibles.</p>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- BTH Project Banner -->
-    <section class="section" style="background-color: var(--color-surface-container);">
+    <!-- BTH Project Callout -->
+    <section class="section" style="background-color: var(--color-brand-dark); color: #FFFFFF;">
       <div class="container text-center gsap-fade-in">
-        <div class="chip" style="margin-bottom: var(--space-md);">Proyecto Educativo BTH 2026</div>
-        <h2 class="display-lg" style="margin-bottom: var(--space-md);">Creado por Estudiantes para Estudiantes</h2>
-        <p class="body-lg" style="max-width: 650px; margin: 0 auto var(--space-xl);">
-          Desarrollado como Proyecto del Bachillerato Técnico Humanístico (BTH) por los estudiantes de 6to de Secundaria: <strong>Elias Montero Montero</strong> y <strong>Juana Maria Nova Nova</strong> en Santa Cruz de la Sierra.
+        <span class="badge-tag-accent" style="margin-bottom: var(--space-md);">Bachillerato Técnico Humanístico</span>
+        <h2 class="title-large text-white" style="margin-bottom: var(--space-md);">Un proyecto hecho por y para estudiantes.</h2>
+        <p class="body-lead" style="color: rgba(255,255,255,0.8); max-width: 700px; margin: 0 auto var(--space-xl);">
+          Desarrollado como Proyecto de Grado BTH por los estudiantes de 6to de Secundaria: <strong>Elias Montero Montero</strong> y <strong>Juana Maria Nova Nova</strong> en Santa Cruz de la Sierra.
         </p>
-        <a href="nosotros.html" class="btn btn-primary btn-pill">Conocer al Equipo Proyectista <i class="ph-bold ph-arrow-right"></i></a>
+        <a href="nosotros.html" class="btn btn-accent">Conocer al Equipo Proyectista <i class="ph-bold ph-arrow-right"></i></a>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container">
-      <div class="grid grid-cols-2 gap-xl" style="margin-bottom: var(--space-xl);">
-        <div>
-          <a href="index.html" class="logo" style="color: white; margin-bottom: var(--space-lg);">
-            <div class="logo-icon"><i class="ph-bold ph-compass"></i></div>
-            <span class="logo-text">vocation+</span>
-          </a>
-          <p class="body-md" style="color: rgba(255,255,255,0.6); max-width: 300px;">
-            Plataforma digital educativa para orientar a los estudiantes de Santa Cruz de la Sierra en la elección de su carrera profesional.
-          </p>
+      <div class="flex justify-between items-center" style="flex-wrap: wrap; gap: var(--space-md);">
+        <a href="index.html" class="logo" style="color: white;">
+          <div class="logo-symbol" style="background: rgba(255,255,255,0.15);"><i class="ph-bold ph-compass"></i></div>
+          <span class="logo-text text-white">vocation+</span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html" class="nav-link text-white">Inicio</a>
+          <a href="carreras.html" class="nav-link text-white">Carreras</a>
+          <a href="universidades.html" class="nav-link text-white">Universidades</a>
+          <a href="recursos.html" class="nav-link text-white">Recursos</a>
+          <a href="nosotros.html" class="nav-link text-white">Nosotros</a>
         </div>
       </div>
       <div class="footer-bottom">

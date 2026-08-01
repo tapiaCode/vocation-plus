@@ -4,9 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carreras Universitarias | vocation+</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
@@ -14,7 +11,7 @@
   <header class="header">
     <div class="container header-inner">
       <a href="index.html" class="logo">
-        <div class="logo-icon"><i class="ph-bold ph-compass"></i></div>
+        <div class="logo-symbol"><i class="ph-bold ph-compass"></i></div>
         <span class="logo-text">vocation+</span>
       </a>
       <nav class="nav-links">
@@ -25,17 +22,20 @@
         <a href="nosotros.html" class="nav-link">Nosotros</a>
       </nav>
       <div class="header-cta">
-        <a href="test.html" class="btn btn-primary btn-pill">Realizar Test</a>
+        <a href="test.html" class="btn btn-accent">Realizar Test</a>
       </div>
-      <button class="mobile-menu-btn"><i class="ph-bold ph-list"></i></button>
+      <button class="mobile-menu-btn" aria-label="Abrir menú"><i class="ph-bold ph-list"></i></button>
     </div>
   </header>
 
   <main>
-    <section class="section" style="background-color: var(--color-primary-container); color: white; padding-top: calc(80px + var(--space-3xl)); padding-bottom: var(--space-4xl);">
+    <section class="section" style="background-color: var(--color-brand-dark); color: #FFFFFF; padding-top: calc(84px + var(--space-3xl)); padding-bottom: var(--space-3xl);">
       <div class="container text-center gsap-fade-in">
-        <h1 class="display-lg">Explora el Mercado</h1>
-        <p class="body-lg" style="color: rgba(255,255,255,0.8); max-width: 600px; margin: var(--space-md) auto 0;">Datos reales sobre las carreras con mayor demanda y proyección en el contexto laboral boliviano.</p>
+        <span class="badge-tag-accent" style="margin-bottom: var(--space-sm);">Mercado Laboral Bolivia</span>
+        <h1 class="title-large text-white">Carreras Demandadas</h1>
+        <p class="body-lead" style="color: rgba(255,255,255,0.8); max-width: 600px; margin: var(--space-sm) auto 0;">
+          Análisis de habilidades, perfiles y proyección profesional para las áreas más populares en Santa Cruz.
+        </p>
       </div>
     </section>
 
@@ -44,31 +44,31 @@
       <div class="container">
         <div class="grid grid-cols-2 gap-xl items-center gsap-fade-in" style="margin-bottom: var(--space-xl);">
           <div>
-            <h2 class="display-lg" style="margin-bottom: var(--space-md);">Ingeniería y Tecnología</h2>
-            <p class="body-lg">El motor de la transformación digital e industrial. Carreras clave para el crecimiento sostenido de Santa Cruz.</p>
+            <h2 class="title-large" style="margin-bottom: var(--space-sm);">Ingeniería y Tecnología</h2>
+            <p class="body-lead">El motor del desarrollo industrial y la transformación digital en las empresas del departamento.</p>
           </div>
-          <div style="border-radius: var(--radius-xl); overflow: hidden; height: 300px;">
-            <img src="src/category_engineering_1785555695342.jpg" alt="Ingeniería y Tecnología" class="image-cover">
+          <div style="border-radius: var(--radius-xl); overflow: hidden; height: 280px; box-shadow: var(--shadow-card);">
+            <img src="src/category_engineering_1785555695342.jpg" alt="Ingeniería y Tecnología" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
         </div>
         
         <div class="grid grid-cols-2 gap-lg">
-          <div class="card">
-            <h3 class="headline-md" style="margin-bottom: var(--space-sm);">Ingeniería de Sistemas</h3>
-            <p class="body-md" style="margin-bottom: var(--space-md);">Disciplina que diseña, desarrolla y gestiona soluciones de software. En Bolivia, es clave para la creciente transformación digital de empresas y startups.</p>
-            <div class="flex gap-sm" style="flex-wrap: wrap;">
-              <span class="chip">Desarrollo de Software</span>
-              <span class="chip">Lógica</span>
-              <span class="chip">Análisis de Datos</span>
+          <div class="card-premium">
+            <h3 class="title-small" style="margin-bottom: var(--space-xs);">Ingeniería de Sistemas</h3>
+            <p class="body-regular" style="margin-bottom: var(--space-md);">Diseño, desarrollo y gestión de software y soluciones tecnológicas para empresas, bancos y startups.</p>
+            <div class="flex gap-xs" style="flex-wrap: wrap;">
+              <span class="badge-tag">Programación</span>
+              <span class="badge-tag">Lógica</span>
+              <span class="badge-tag">Bases de Datos</span>
             </div>
           </div>
-          <div class="card">
-            <h3 class="headline-md" style="margin-bottom: var(--space-sm);">Ingeniería Civil</h3>
-            <p class="body-md" style="margin-bottom: var(--space-md);">Diseño y construcción de infraestructuras. Muy demandada en Santa Cruz por el acelerado crecimiento urbano y desarrollo inmobiliario continuo.</p>
-            <div class="flex gap-sm" style="flex-wrap: wrap;">
-              <span class="chip">Cálculo Estructural</span>
-              <span class="chip">Gestión de Obras</span>
-              <span class="chip">AutoCAD / Civil 3D</span>
+          <div class="card-premium">
+            <h3 class="title-small" style="margin-bottom: var(--space-xs);">Ingeniería Civil</h3>
+            <p class="body-regular" style="margin-bottom: var(--space-md);">Planificación, cálculo y ejecución de obras de infraestructura pública e inmobiliaria en crecimiento.</p>
+            <div class="flex gap-xs" style="flex-wrap: wrap;">
+              <span class="badge-tag">Estructuras</span>
+              <span class="badge-tag">Gestión de Obras</span>
+              <span class="badge-tag">AutoCAD</span>
             </div>
           </div>
         </div>
@@ -76,35 +76,35 @@
     </section>
 
     <!-- Health Sciences -->
-    <section class="section" style="background-color: var(--color-surface-container);">
+    <section class="section" style="background-color: var(--color-bg-subtle);">
       <div class="container">
         <div class="grid grid-cols-2 gap-xl items-center gsap-fade-in" style="margin-bottom: var(--space-xl);">
-          <div style="border-radius: var(--radius-xl); overflow: hidden; height: 300px; order: -1;">
-            <img src="src/category_health_1785555706589.jpg" alt="Ciencias de la Salud" class="image-cover">
+          <div style="border-radius: var(--radius-xl); overflow: hidden; height: 280px; box-shadow: var(--shadow-card); order: -1;">
+            <img src="src/category_health_1785555706589.jpg" alt="Ciencias de la Salud" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div>
-            <h2 class="display-lg" style="margin-bottom: var(--space-md);">Ciencias de la Salud</h2>
-            <p class="body-lg">Vocaciones dedicadas a la preservación de la vida, el bienestar humano y la investigación clínica.</p>
+            <h2 class="title-large" style="margin-bottom: var(--space-sm);">Ciencias de la Salud</h2>
+            <p class="body-lead">Vocaciones comprometidas con el cuidado humano, la clínica especializada y la prevención.</p>
           </div>
         </div>
         
         <div class="grid grid-cols-2 gap-lg">
-          <div class="card">
-            <h3 class="headline-md" style="margin-bottom: var(--space-sm);">Medicina</h3>
-            <p class="body-md" style="margin-bottom: var(--space-md);">Formación orientada al diagnóstico y tratamiento de enfermedades. En el contexto boliviano, exige gran compromiso social y adaptación a los retos.</p>
-            <div class="flex gap-sm" style="flex-wrap: wrap;">
-              <span class="chip">Empatía</span>
-              <span class="chip">Diagnóstico Crítico</span>
-              <span class="chip">Resiliencia</span>
+          <div class="card-premium">
+            <h3 class="title-small" style="margin-bottom: var(--space-xs);">Medicina</h3>
+            <p class="body-regular" style="margin-bottom: var(--space-md);">Diagnóstico, tratamiento y preservación de la salud humana con alto sentido de servicio social.</p>
+            <div class="flex gap-xs" style="flex-wrap: wrap;">
+              <span class="badge-tag">Diagnóstico</span>
+              <span class="badge-tag">Empatía</span>
+              <span class="badge-tag">Práctica Clínica</span>
             </div>
           </div>
-          <div class="card">
-            <h3 class="headline-md" style="margin-bottom: var(--space-sm);">Bioquímica y Farmacia</h3>
-            <p class="body-md" style="margin-bottom: var(--space-md);">Estudio de procesos biológicos y químicos. Posee alta demanda en laboratorios clínicos, farmacéuticas y control de calidad en Bolivia.</p>
-            <div class="flex gap-sm" style="flex-wrap: wrap;">
-              <span class="chip">Trabajo de Laboratorio</span>
-              <span class="chip">Atención al Detalle</span>
-              <span class="chip">Análisis Científico</span>
+          <div class="card-premium">
+            <h3 class="title-small" style="margin-bottom: var(--space-xs);">Bioquímica y Farmacia</h3>
+            <p class="body-regular" style="margin-bottom: var(--space-md);">Investigación biológica, análisis clínico de laboratorio y control de calidad farmacéutico.</p>
+            <div class="flex gap-xs" style="flex-wrap: wrap;">
+              <span class="badge-tag">Laboratorio</span>
+              <span class="badge-tag">Análisis Clínico</span>
+              <span class="badge-tag">Química</span>
             </div>
           </div>
         </div>
@@ -114,61 +114,60 @@
     <!-- Business & Social Sciences -->
     <section class="section">
       <div class="container">
-        <!-- Business Header -->
         <div class="grid grid-cols-2 gap-xl items-center gsap-fade-in" style="margin-bottom: var(--space-xl);">
           <div>
-            <h2 class="display-lg" style="margin-bottom: var(--space-md);">Negocios y Humanidades</h2>
-            <p class="body-lg">Liderazgo corporativo, entendimiento del comportamiento humano y defensa del marco legal.</p>
+            <h2 class="title-large" style="margin-bottom: var(--space-sm);">Negocios y Humanidades</h2>
+            <p class="body-lead">Gestión corporativa, marco jurídico e inteligencia emocional y social.</p>
           </div>
-          <div style="border-radius: var(--radius-xl); overflow: hidden; height: 300px; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm);">
-            <img src="src/category_business_1785555733765.jpg" alt="Business" class="image-cover" style="border-radius: var(--radius-md);">
-            <img src="src/category_social_1785555744737.jpg" alt="Social" class="image-cover" style="border-radius: var(--radius-md);">
+          <div style="border-radius: var(--radius-xl); overflow: hidden; height: 280px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+            <img src="src/category_business_1785555733765.jpg" alt="Business" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="src/category_social_1785555744737.jpg" alt="Social" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
         </div>
 
         <div class="grid grid-cols-2 gap-lg" style="margin-bottom: var(--space-lg);">
-          <div class="card">
-            <h3 class="headline-md" style="margin-bottom: var(--space-sm);">Administración de Empresas</h3>
-            <p class="body-md" style="margin-bottom: var(--space-md);">Gestión estratégica de recursos financieros, humanos y operativos. Es fundamental para el ecosistema corporativo y emprendedor de Santa Cruz.</p>
-            <div class="flex gap-sm" style="flex-wrap: wrap;">
-              <span class="chip">Liderazgo</span>
-              <span class="chip">Visión Comercial</span>
-              <span class="chip">Gestión de Proyectos</span>
+          <div class="card-premium">
+            <h3 class="title-small" style="margin-bottom: var(--space-xs);">Administración de Empresas</h3>
+            <p class="body-regular" style="margin-bottom: var(--space-md);">Liderazgo de recursos humanos, planificación financiera y dirección de negocios.</p>
+            <div class="flex gap-xs" style="flex-wrap: wrap;">
+              <span class="badge-tag">Liderazgo</span>
+              <span class="badge-tag">Finanzas</span>
+              <span class="badge-tag">Estrategia</span>
             </div>
           </div>
-          <div class="card">
-            <h3 class="headline-md" style="margin-bottom: var(--space-sm);">Marketing</h3>
-            <p class="body-md" style="margin-bottom: var(--space-md);">Creación de estrategias para identificar necesidades del mercado. Esencial por el auge del comercio electrónico y competitividad empresarial.</p>
-            <div class="flex gap-sm" style="flex-wrap: wrap;">
-              <span class="chip">Estrategia Digital</span>
-              <span class="chip">Métricas</span>
-              <span class="chip">Creatividad</span>
+          <div class="card-premium">
+            <h3 class="title-small" style="margin-bottom: var(--space-xs);">Marketing</h3>
+            <p class="body-regular" style="margin-bottom: var(--space-md);">Estrategia comercial, estudio de mercado digital y posicionamiento de marcas.</p>
+            <div class="flex gap-xs" style="flex-wrap: wrap;">
+              <span class="badge-tag">Estrategia Digital</span>
+              <span class="badge-tag">Creatividad</span>
+              <span class="badge-tag">Métricas</span>
             </div>
           </div>
         </div>
+
         <div class="grid grid-cols-2 gap-lg">
-          <div class="card">
-            <h3 class="headline-md" style="margin-bottom: var(--space-sm);">Derecho</h3>
-            <p class="body-md" style="margin-bottom: var(--space-md);">Estudio de normativas y leyes para la defensa legal o función pública. Requiere actualización constante frente a la dinámica jurídica del país.</p>
-            <div class="flex gap-sm" style="flex-wrap: wrap;">
-              <span class="chip">Argumentación</span>
-              <span class="chip">Análisis Legal</span>
-              <span class="chip">Negociación</span>
+          <div class="card-premium">
+            <h3 class="title-small" style="margin-bottom: var(--space-xs);">Derecho</h3>
+            <p class="body-regular" style="margin-bottom: var(--space-md);">Defensa legal, asesoría corporativa, marco regulatorio y función pública en Bolivia.</p>
+            <div class="flex gap-xs" style="flex-wrap: wrap;">
+              <span class="badge-tag">Argumentación</span>
+              <span class="badge-tag">Leyes</span>
+              <span class="badge-tag">Negociación</span>
             </div>
           </div>
-          <div class="card">
-            <h3 class="headline-md" style="margin-bottom: var(--space-sm);">Psicología</h3>
-            <p class="body-md" style="margin-bottom: var(--space-md);">Ciencia que estudia el comportamiento. En Bolivia hay una creciente valoración del talento humano, bienestar organizacional y salud mental clínica.</p>
-            <div class="flex gap-sm" style="flex-wrap: wrap;">
-              <span class="chip">Empatía</span>
-              <span class="chip">Análisis de Comportamiento</span>
-              <span class="chip">Comunicación</span>
+          <div class="card-premium">
+            <h3 class="title-small" style="margin-bottom: var(--space-xs);">Psicología</h3>
+            <p class="body-regular" style="margin-bottom: var(--space-md);">Estudio de los procesos mentales, gestión del talento humano y salud mental organizacional.</p>
+            <div class="flex gap-xs" style="flex-wrap: wrap;">
+              <span class="badge-tag">Comportamiento</span>
+              <span class="badge-tag">Escucha Activa</span>
+              <span class="badge-tag">Talento Humano</span>
             </div>
           </div>
         </div>
       </div>
     </section>
-
   </main>
 
   <footer class="footer">

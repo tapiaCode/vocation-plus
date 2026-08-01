@@ -3,7 +3,7 @@
  * 20 questions mapping to 5 main categories:
  * - ENG: Ingeniería y Tecnología
  * - HEA: Ciencias de la Salud
- * - BUS: Negocios y Economía
+ * - BUS: Ciencias Económicas y Empresariales
  * - SOC: Ciencias Sociales y Humanidades
  * - ART: Arte y Diseño
  */
@@ -11,156 +11,156 @@
 const questions = [
   // 1-4
   { text: "¿Qué actividad disfrutas más en tu tiempo libre?", options: [
-    { text: "Armar, desarmar o reparar aparatos electrónicos.", category: "ENG", icon: "ph-wrench" },
-    { text: "Leer sobre avances médicos o primeros auxilios.", category: "HEA", icon: "ph-first-aid" },
-    { text: "Organizar eventos, planificar finanzas o liderar un grupo.", category: "BUS", icon: "ph-chart-bar" },
-    { text: "Dibujar, pintar, o diseñar elementos visuales.", category: "ART", icon: "ph-palette" }
+    { text: "Armar, desarmar o reparar aparatos electrónicos o software.", category: "ENG", icon: "ph-wrench" },
+    { text: "Leer sobre avances médicos, biología o primeros auxilios.", category: "HEA", icon: "ph-first-aid" },
+    { text: "Organizar proyectos, planificar presupuestos o liderar equipos.", category: "BUS", icon: "ph-chart-bar" },
+    { text: "Dibujar, pintar o crear diseños y contenido visual.", category: "ART", icon: "ph-palette" }
   ]},
   { text: "En un trabajo de equipo en el colegio, usualmente tú eres quien:", options: [
     { text: "Redacta el informe y cuida la ortografía y el mensaje.", category: "SOC", icon: "ph-pen-nib" },
-    { text: "Aporta ideas creativas sobre cómo presentar el proyecto (diseño visual).", category: "ART", icon: "ph-paint-brush" },
-    { text: "Asigna las tareas y asegura que se cumplan los plazos.", category: "BUS", icon: "ph-users" },
-    { text: "Se encarga de la parte de investigación matemática o lógica.", category: "ENG", icon: "ph-calculator" }
+    { text: "Aporta ideas creativas sobre la presentación estética del proyecto.", category: "ART", icon: "ph-paint-brush" },
+    { text: "Asigna tareas y asegura que se cumplan las metas y tiempos.", category: "BUS", icon: "ph-users" },
+    { text: "Se encarga del análisis lógico, matemático o técnico.", category: "ENG", icon: "ph-calculator" }
   ]},
-  { text: "¿Qué tipo de documentales o videos prefieres ver?", options: [
-    { text: "El universo, tecnología espacial o construcción de megaestructuras.", category: "ENG", icon: "ph-rocket" },
-    { text: "Misterios del cuerpo humano, biología o rescates médicos.", category: "HEA", icon: "ph-heartbeat" },
-    { text: "Historia antigua, psicología humana o problemas sociales.", category: "SOC", icon: "ph-brain" },
-    { text: "Biografías de emprendedores exitosos y empresas.", category: "BUS", icon: "ph-briefcase" }
+  { text: "¿Qué tipo de documentales o contenidos prefieres ver?", options: [
+    { text: "El universo, tecnología espacial o ingeniería de infraestructura.", category: "ENG", icon: "ph-rocket" },
+    { text: "El cuerpo humano, ciencias biológicas o avances clínicos.", category: "HEA", icon: "ph-heartbeat" },
+    { text: "Historia, comportamiento humano y problemas de la sociedad.", category: "SOC", icon: "ph-brain" },
+    { text: "Emprendedores de éxito, startups y estrategias comerciales.", category: "BUS", icon: "ph-briefcase" }
   ]},
-  { text: "Si pudieras resolver un problema mundial, ¿cuál elegirías?", options: [
-    { text: "Desarrollar una cura para enfermedades incurables.", category: "HEA", icon: "ph-pill" },
-    { text: "Erradicar la pobreza mejorando la economía global.", category: "BUS", icon: "ph-globe-hemisphere-west" },
-    { text: "Crear energías 100% limpias usando nueva tecnología.", category: "ENG", icon: "ph-lightning" },
-    { text: "Garantizar educación y justicia para todos.", category: "SOC", icon: "ph-scales" }
+  { text: "Si pudieras aportar a resolver un reto mundial, ¿cuál elegirías?", options: [
+    { text: "Desarrollar soluciones médicas para enfermedades complejas.", category: "HEA", icon: "ph-pill" },
+    { text: "Impulsar la economía y crear oportunidades de empleo.", category: "BUS", icon: "ph-globe-hemisphere-west" },
+    { text: "Crear tecnologías sostenibles y energías limpias.", category: "ENG", icon: "ph-lightning" },
+    { text: "Garantizar la justicia, educación y derechos ciudadanos.", category: "SOC", icon: "ph-scales" }
   ]},
   // 5-8
-  { text: "¿Cómo prefieres expresar tus ideas?", options: [
-    { text: "A través de gráficos, diagramas o modelos físicos.", category: "ENG", icon: "ph-graph" },
-    { text: "Mediante dibujos, fotografías o música.", category: "ART", icon: "ph-camera" },
-    { text: "Escribiendo ensayos, artículos o debatiendo.", category: "SOC", icon: "ph-chat-circle-text" },
-    { text: "Exponiendo presentaciones de negocios o ventas.", category: "BUS", icon: "ph-presentation-chart" }
+  { text: "¿Cómo prefieres estructurar y comunicar tus ideas?", options: [
+    { text: "Mediante diagramas, mapas de procesos o modelos lógicos.", category: "ENG", icon: "ph-graph" },
+    { text: "A través de expresiones visuales, bocetos o producciones.", category: "ART", icon: "ph-camera" },
+    { text: "Escribiendo ensayos, debatiendo o argumentando oralmente.", category: "SOC", icon: "ph-chat-circle-text" },
+    { text: "Presentando propuestas comerciales y metas cuantificables.", category: "BUS", icon: "ph-presentation-chart" }
   ]},
-  { text: "Si te regalan un libro, prefieres que sea sobre:", options: [
-    { text: "Anatomía, nutrición o cuidados de la salud.", category: "HEA", icon: "ph-apple-logo" },
-    { text: "Historia del arte, diseño de interiores o moda.", category: "ART", icon: "ph-scissors" },
-    { text: "Cómo iniciar tu propio negocio de éxito.", category: "BUS", icon: "ph-money" },
-    { text: "Sociología, filosofía o leyes fundamentales.", category: "SOC", icon: "ph-book-open" }
+  { text: "Si te regalan un libro para leer el fin de semana, prefieres que sea de:", options: [
+    { text: "Anatomía, salud integral o biotecnología.", category: "HEA", icon: "ph-apple-logo" },
+    { text: "Diseño, historia del arte o producción audiovisual.", category: "ART", icon: "ph-scissors" },
+    { text: "Estrategia de negocios y modelos de innovación.", category: "BUS", icon: "ph-money" },
+    { text: "Derecho, sociología o filosofía aplicada.", category: "SOC", icon: "ph-book-open" }
   ]},
-  { text: "¿Qué materia escolar se te hace más fácil o interesante?", options: [
-    { text: "Matemáticas y Física.", category: "ENG", icon: "ph-math-operations" },
+  { text: "¿Qué materias escolares te resultan más estimulantes?", options: [
+    { text: "Matemáticas, Física o Computación.", category: "ENG", icon: "ph-math-operations" },
     { text: "Biología y Química.", category: "HEA", icon: "ph-flask" },
-    { text: "Artes plásticas o Música.", category: "ART", icon: "ph-music-note" },
-    { text: "Historia, Literatura o Filosofía.", category: "SOC", icon: "ph-books" }
+    { text: "Artes plásticas, Música o Expresión.", category: "ART", icon: "ph-music-note" },
+    { text: "Historia, Ciencias Sociales o Literatura.", category: "SOC", icon: "ph-books" }
   ]},
-  { text: "¿Qué ambiente de trabajo te imaginas en el futuro?", options: [
-    { text: "Un hospital, clínica o laboratorio clínico.", category: "HEA", icon: "ph-hospital" },
-    { text: "Un bufete de abogados, una ONG o un aula de clases.", category: "SOC", icon: "ph-chalkboard-teacher" },
-    { text: "Una oficina corporativa tomando decisiones directivas.", category: "BUS", icon: "ph-buildings" },
-    { text: "Un estudio de diseño, agencia de publicidad o taller.", category: "ART", icon: "ph-pen" }
+  { text: "¿En qué entorno profesional te proyectas a futuro?", options: [
+    { text: "Un centro médico, hospital o laboratorio de análisis.", category: "HEA", icon: "ph-hospital" },
+    { text: "Un bufete, juzgado, institución social o aula.", category: "SOC", icon: "ph-chalkboard-teacher" },
+    { text: "Una empresa corporativa dirigiendo equipos y metas.", category: "BUS", icon: "ph-buildings" },
+    { text: "Un estudio creativo, agencia de diseño o producción.", category: "ART", icon: "ph-pen" }
   ]},
   // 9-12
-  { text: "¿Qué cualidad te describe mejor?", options: [
-    { text: "Analítico y detallista.", category: "ENG", icon: "ph-magnifying-glass" },
-    { text: "Empático y cuidadoso con los demás.", category: "HEA", icon: "ph-hands-clapping" },
-    { text: "Persuasivo y organizado.", category: "BUS", icon: "ph-trend-up" },
-    { text: "Creativo y original.", category: "ART", icon: "ph-lightbulb" }
+  { text: "¿Qué característica personal destaca más en ti?", options: [
+    { text: "Analítico y orientada al detalle técnico.", category: "ENG", icon: "ph-magnifying-glass" },
+    { text: "Empático y comprometido con el bienestar de otros.", category: "HEA", icon: "ph-hands-clapping" },
+    { text: "Persuasivo, organizado y estratégico.", category: "BUS", icon: "ph-trend-up" },
+    { text: "Creativo, intuitivo y estético.", category: "ART", icon: "ph-lightbulb" }
   ]},
-  { text: "Cuando usas una aplicación nueva, lo primero que notas es:", options: [
-    { text: "Su diseño visual, los colores y las tipografías.", category: "ART", icon: "ph-swatches" },
-    { text: "Cómo está programada y si es rápida o lenta.", category: "ENG", icon: "ph-code" },
-    { text: "Si el modelo de negocio detrás es rentable.", category: "BUS", icon: "ph-currency-dollar" },
-    { text: "Cómo interactúa la gente en ella (aspecto social).", category: "SOC", icon: "ph-users-three" }
+  { text: "Al interactuar con un producto o aplicación digital, observas:", options: [
+    { text: "La armonía visual, interfaz de usuario y colores.", category: "ART", icon: "ph-swatches" },
+    { text: "Su rendimiento, velocidad y lógica de programación.", category: "ENG", icon: "ph-code" },
+    { text: "El modelo de negocio e impacto comercial.", category: "BUS", icon: "ph-currency-dollar" },
+    { text: "El impacto en las personas y su utilidad social.", category: "SOC", icon: "ph-users-three" }
   ]},
-  { text: "¿Qué te causa más frustración?", options: [
-    { text: "Que las cosas no funcionen lógicamente o estén rotas.", category: "ENG", icon: "ph-warning" },
-    { text: "Ver a alguien sufrir sin poder ayudarle.", category: "HEA", icon: "ph-bandaids" },
-    { text: "La injusticia o la falta de ética en la sociedad.", category: "SOC", icon: "ph-scales" },
-    { text: "Un entorno desordenado, feo o sin armonía estética.", category: "ART", icon: "ph-x-circle" }
+  { text: "¿Qué situación te genera mayor motivación para actuar?", options: [
+    { text: "Resolver un fallo técnico o sistema defectuoso.", category: "ENG", icon: "ph-warning" },
+    { text: "Brindar alivio o atención médica a alguien necesitado.", category: "HEA", icon: "ph-bandaids" },
+    { text: "Defender una causa justa frente a una arbitrariedad.", category: "SOC", icon: "ph-scales" },
+    { text: "Transformar un espacio feo en una obra armónica y funcional.", category: "ART", icon: "ph-sparkle" }
   ]},
-  { text: "En un videojuego, tú prefieres:", options: [
-    { text: "Administrar recursos, construir ciudades y manejar la economía.", category: "BUS", icon: "ph-city" },
-    { text: "Juegos con una historia profunda y diálogos complejos.", category: "SOC", icon: "ph-book-bookmark" },
-    { text: "Construir máquinas, resolver puzzles o programar sistemas.", category: "ENG", icon: "ph-puzzle-piece" },
-    { text: "Crear personajes, diseñar sus atuendos y el mundo.", category: "ART", icon: "ph-t-shirt" }
+  { text: "En un proyecto interactivo o de simulación, prefieres:", options: [
+    { text: "Administrar recursos, presupuestos y crecimiento económico.", category: "BUS", icon: "ph-city" },
+    { text: "Desarrollar la narrativa, guión y profundidad de historia.", category: "SOC", icon: "ph-book-bookmark" },
+    { text: "Programar la lógica, mecánicas y resolver acertijos complejos.", category: "ENG", icon: "ph-puzzle-piece" },
+    { text: "Diseñar los personajes, escenarios y estética del mundo.", category: "ART", icon: "ph-t-shirt" }
   ]},
   // 13-16
-  { text: "Si tuvieras que organizar un campamento, te encargarías de:", options: [
-    { text: "El botiquín de primeros auxilios y el menú saludable.", category: "HEA", icon: "ph-medical-cross" },
-    { text: "El presupuesto, la logística y cobrar las cuotas.", category: "BUS", icon: "ph-wallet" },
-    { text: "Montar las tiendas y armar el sistema de iluminación.", category: "ENG", icon: "ph-tent" },
-    { text: "Dinamizar al grupo, mediar conflictos y hacer juegos.", category: "SOC", icon: "ph-smiley" }
+  { text: "Si organizas una actividad comunitaria o escolar, te ocupas de:", options: [
+    { text: "El protocolo de primeros auxilios y salud de los asistentes.", category: "HEA", icon: "ph-medical-cross" },
+    { text: "El presupuesto, administración y cobro de inscripciones.", category: "BUS", icon: "ph-wallet" },
+    { text: "El montaje de equipos, sonido e infraestructura técnica.", category: "ENG", icon: "ph-tent" },
+    { text: "Mediación de grupo, acogida y conducción del evento.", category: "SOC", icon: "ph-smiley" }
   ]},
-  { text: "¿Qué noticia te llamaría más la atención?", options: [
-    { text: "\"Nuevo descubrimiento genético para curar enfermedades\".", category: "HEA", icon: "ph-dna" },
-    { text: "\"Se aprueba nueva ley de protección ciudadana\".", category: "SOC", icon: "ph-gavel" },
-    { text: "\"Lanzamiento del nuevo procesador cuántico superrápido\".", category: "ENG", icon: "ph-cpu" },
-    { text: "\"Startup tecnológica alcanza valor de mil millones de dólares\".", category: "BUS", icon: "ph-rocket-launch" }
+  { text: "¿Qué noticia captaría de inmediato tu atención?", options: [
+    { text: "\"Avance biológico prometedor en investigación clínica\".", category: "HEA", icon: "ph-dna" },
+    { text: "\"Aprobación de marco legal para protección de garantías\".", category: "SOC", icon: "ph-gavel" },
+    { text: "\"Innovación en arquitectura de procesadores de alto rendimiento\".", category: "ENG", icon: "ph-cpu" },
+    { text: "\"Empresa emergente regional duplica su valor en el mercado\".", category: "BUS", icon: "ph-rocket-launch" }
   ]},
-  { text: "¿Qué te gustaría aprender a hacer perfecto?", options: [
-    { text: "Animación 3D e ilustración digital.", category: "ART", icon: "ph-cube" },
-    { text: "Invertir en la bolsa de valores y finanzas.", category: "BUS", icon: "ph-chart-line" },
-    { text: "Suturar heridas e inyectar correctamente.", category: "HEA", icon: "ph-syringe" },
-    { text: "Programar en múltiples lenguajes informáticos.", category: "ENG", icon: "ph-terminal" }
+  { text: "¿Qué competencia técnica te gustaría perfeccionar?", options: [
+    { text: "Modelado 3D, animación e iluminación digital.", category: "ART", icon: "ph-cube" },
+    { text: "Gestión de inversiones, finanzas y mercado comercial.", category: "BUS", icon: "ph-chart-line" },
+    { text: "Procedimientos de diagnóstico clínico y laboratorio.", category: "HEA", icon: "ph-syringe" },
+    { text: "Desarrollo de software y arquitectura de redes.", category: "ENG", icon: "ph-terminal" }
   ]},
-  { text: "¿Qué objeto te parece más interesante?", options: [
-    { text: "Un microscopio.", category: "HEA", icon: "ph-microscope" },
-    { text: "Una cámara fotográfica profesional.", category: "ART", icon: "ph-camera" },
-    { text: "Un contrato legal o un libro antiguo.", category: "SOC", icon: "ph-scroll" },
-    { text: "Una placa madre (motherboard) de computadora.", category: "ENG", icon: "ph-hard-drive" }
+  { text: "¿Qué instrumento o herramienta te resulta más fascinante?", options: [
+    { text: "Un microscopio de laboratorio.", category: "HEA", icon: "ph-microscope" },
+    { text: "Una cámara fotográfica cinematográfica.", category: "ART", icon: "ph-camera" },
+    { text: "Un texto o tratado jurídico histórico.", category: "SOC", icon: "ph-scroll" },
+    { text: "Una tarjeta de circuito impreso o procesador.", category: "ENG", icon: "ph-hard-drive" }
   ]},
   // 17-20
-  { text: "Si te dieran dinero para invertir en un proyecto, sería en:", options: [
-    { text: "Una aplicación de software o robótica.", category: "ENG", icon: "ph-robot" },
-    { text: "Un hospital o clínica de especialidades.", category: "HEA", icon: "ph-hospital" },
-    { text: "Un nuevo restaurante o tienda comercial.", category: "BUS", icon: "ph-storefront" },
-    { text: "Una galería de arte o estudio de moda.", category: "ART", icon: "ph-paint-roller" }
+  { text: "Si tuvieras recursos para emprender, invertirías en:", options: [
+    { text: "Una empresa de desarrollo tecnológico o robótica.", category: "ENG", icon: "ph-robot" },
+    { text: "Un centro médico o clínica especializada.", category: "HEA", icon: "ph-hospital" },
+    { text: "Una cadena comercial o consultora de negocios.", category: "BUS", icon: "ph-storefront" },
+    { text: "Un estudio de diseño, moda o galería cultural.", category: "ART", icon: "ph-paint-roller" }
   ]},
-  { text: "¿Cómo te sientes respecto a hablar en público?", options: [
-    { text: "Me encanta, soy bueno debatiendo y expresando ideas sociales.", category: "SOC", icon: "ph-megaphone" },
-    { text: "Lo hago bien si es para vender una idea o producto.", category: "BUS", icon: "ph-handshake" },
-    { text: "Prefiero mostrar mi trabajo visual (arte, diseño) que hablar.", category: "ART", icon: "ph-monitor" },
-    { text: "Prefiero explicar datos exactos o cómo funciona un sistema.", category: "ENG", icon: "ph-database" }
+  { text: "¿Cuál es tu fortaleza al presentar un trabajo ante un público?", options: [
+    { text: "Mi facilidad de palabra, debate y defensa de derechos.", category: "SOC", icon: "ph-megaphone" },
+    { text: "Mi capacidad de convicción y negociación estratégica.", category: "BUS", icon: "ph-handshake" },
+    { text: "La calidad visual de mis diapositivas y soporte estético.", category: "ART", icon: "ph-monitor" },
+    { text: "El rigor de mis datos, estadísticas y evidencia lógica.", category: "ENG", icon: "ph-database" }
   ]},
-  { text: "Cuando vas a un museo, ¿qué sección prefieres?", options: [
-    { text: "Ciencia, tecnología e inventos históricos.", category: "ENG", icon: "ph-gear" },
-    { text: "Arte contemporáneo, esculturas y pinturas.", category: "ART", icon: "ph-frame-corners" },
-    { text: "Antropología, historia antigua y evolución humana.", category: "SOC", icon: "ph-globe" },
-    { text: "Biología, anatomía y ciencias naturales.", category: "HEA", icon: "ph-leaf" }
+  { text: "Al visitar un centro cultural o exposición, disfrutas más de:", options: [
+    { text: "La sala de inventos tecnológicos e ingeniería.", category: "ENG", icon: "ph-gear" },
+    { text: "La exhibición de pintura, escultura y diseño.", category: "ART", icon: "ph-frame-corners" },
+    { text: "La sección de historia social, leyes y civilizaciones.", category: "SOC", icon: "ph-globe" },
+    { text: "La sala de ciencias naturales, anatomía y biodiversidad.", category: "HEA", icon: "ph-leaf" }
   ]},
-  { text: "En tu futuro ideal, al final del día sientes que aportaste al mundo porque:", options: [
-    { text: "Lideraste un equipo hacia el éxito comercial.", category: "BUS", icon: "ph-star" },
-    { text: "Defendiste los derechos de alguien o educaste a jóvenes.", category: "SOC", icon: "ph-student" },
-    { text: "Salvaste una vida o mejoraste la salud de un paciente.", category: "HEA", icon: "ph-heart" },
-    { text: "Creaste belleza visual que inspira a los demás.", category: "ART", icon: "ph-image" }
+  { text: "Al concluir tu formación profesional, tu mayor satisfacción será haber:", options: [
+    { text: "Liderado proyectos sostenibles y con alta eficiencia comercial.", category: "BUS", icon: "ph-star" },
+    { text: "Defendido causas justas o contribuido a la educación.", category: "SOC", icon: "ph-student" },
+    { text: "Salvado vidas o mejorado la salud física de las personas.", category: "HEA", icon: "ph-heart" },
+    { text: "Creaciones estéticas visuales que inspiran a la comunidad.", category: "ART", icon: "ph-image" }
   ]}
 ];
 
 const categoryData = {
   ENG: {
     title: "Ingeniería y Tecnología",
-    desc: "Tienes un fuerte interés por la resolución de problemas lógicos, el uso de tecnología y la construcción de sistemas físicos o virtuales.",
-    careers: ["Ingeniería de Sistemas", "Ingeniería Civil", "Ingeniería Industrial", "Arquitectura", "Redes y Telecom."]
+    desc: "Destacas por tu pensamiento analítico, aptitud matemática y capacidad para diseñar soluciones tecnológicas, de software e infraestructura.",
+    careers: ["Ingeniería de Sistemas", "Ingeniería Civil", "Ingeniería Industrial", "Arquitectura", "Redes y Telecomunicaciones"]
   },
   HEA: {
     title: "Ciencias de la Salud",
-    desc: "Tienes una fuerte vocación de servicio, empatía y un gran interés por la biología y el cuidado del bienestar humano.",
+    desc: "Tienes una marcada vocación de servicio, empatía hacia los demás e interés profundo por la biología, la medicina y el cuidado del ser humano.",
     careers: ["Medicina", "Odontología", "Bioquímica y Farmacia", "Fisioterapia", "Nutrición"]
   },
   BUS: {
     title: "Ciencias Económicas y Empresariales",
-    desc: "Destacas por tu capacidad de liderazgo, persuasión, organización y visión para los negocios y la optimización de recursos.",
+    desc: "Posees visión estratégica, habilidad para el liderazgo, la gestión de proyectos comerciales y el desarrollo de emprendimientos.",
     careers: ["Administración de Empresas", "Ingeniería Comercial", "Marketing", "Ingeniería Financiera", "Comercio Internacional"]
   },
   SOC: {
     title: "Ciencias Sociales y Humanidades",
-    desc: "Te interesan las relaciones humanas, la justicia, la comunicación y el análisis del comportamiento de la sociedad.",
+    desc: "Te interesan las leyes, la justicia social, la comunicación, la enseñanza y el análisis profundo de la sociedad humana.",
     careers: ["Derecho", "Psicología", "Comunicación Social", "Relaciones Internacionales", "Pedagogía"]
   },
   ART: {
-    title: "Arte y Diseño",
-    desc: "Posees una gran creatividad, sensibilidad estética y habilidad para comunicar conceptos a través de medios visuales o sonoros.",
-    careers: ["Diseño Gráfico", "Diseño de Interiores", "Artes Plásticas", "Animación Digital", "Moda"]
+    title: "Arte, Diseño y Creatividad Visual",
+    desc: "Cuentas con alta sensibilidad estética, originalidad y destreza para transmitir conceptos complejos a través de medios visuales.",
+    careers: ["Diseño Gráfico", "Diseño de Interiores", "Artes Plásticas", "Animación Digital", "Diseño de Moda"]
   }
 };
 
@@ -177,46 +177,50 @@ document.addEventListener("DOMContentLoaded", () => {
   const optionsContainer = document.getElementById("options-container");
   const questionCounter = document.getElementById("question-counter");
   const progressBar = document.getElementById("progress-bar");
+  const progressPercent = document.getElementById("progress-percent");
   
-  startBtn.addEventListener("click", () => {
-    // GSAP Out Start Screen
-    gsap.to(startScreen, { 
-      opacity: 0, 
-      y: -20, 
-      duration: 0.4, 
-      onComplete: () => {
-        startScreen.style.display = "none";
-        quizScreen.style.display = "flex";
-        gsap.fromTo(quizScreen, { opacity: 0, x: 50 }, { opacity: 1, x: 0, duration: 0.5 });
-        loadQuestion();
-      }
+  if (startBtn) {
+    startBtn.addEventListener("click", () => {
+      gsap.to(startScreen, { 
+        opacity: 0, 
+        y: -20, 
+        duration: 0.4, 
+        onComplete: () => {
+          startScreen.style.display = "none";
+          quizScreen.style.display = "flex";
+          gsap.fromTo(quizScreen, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5 });
+          loadQuestion();
+        }
+      });
     });
-  });
+  }
 
   function loadQuestion() {
     const q = questions[currentQuestionIndex];
     questionText.textContent = q.text;
     
-    // Update Progress
-    const progress = ((currentQuestionIndex) / questions.length) * 100;
-    progressBar.style.width = `${progress}%`;
-    questionCounter.textContent = `Pregunta ${currentQuestionIndex + 1} de ${questions.length}`;
+    // Update Progress Bar & Percentage
+    const progressRatio = currentQuestionIndex / questions.length;
+    const progressPctVal = Math.round(progressRatio * 100);
+    progressBar.style.transform = `scaleX(${progressRatio})`;
+    if (progressPercent) progressPercent.textContent = `${progressPctVal}%`;
+    questionCounter.innerHTML = `<i class="ph-bold ph-question"></i> Pregunta ${currentQuestionIndex + 1} de ${questions.length}`;
 
     // Render Options
     optionsContainer.innerHTML = "";
     q.options.forEach((opt, index) => {
       const btn = document.createElement("button");
-      btn.className = "option-btn";
+      btn.className = "option-card-btn";
       btn.innerHTML = `
-        <div class="option-icon"><i class="ph-bold ${opt.icon}"></i></div>
+        <div class="option-icon-box"><i class="ph-bold ${opt.icon}"></i></div>
         <span>${opt.text}</span>
       `;
       btn.onclick = () => handleAnswer(opt.category);
       
-      // Animate options in
+      // GSAP Option entrance
       gsap.fromTo(btn, 
-        { opacity: 0, y: 20 }, 
-        { opacity: 1, y: 0, duration: 0.4, delay: index * 0.1 }
+        { opacity: 0, y: 15 }, 
+        { opacity: 1, y: 0, duration: 0.35, delay: index * 0.08 }
       );
       
       optionsContainer.appendChild(btn);
@@ -226,17 +230,15 @@ document.addEventListener("DOMContentLoaded", () => {
   function handleAnswer(category) {
     scores[category]++;
     
-    // Animate out current question
-    gsap.to(questionText, { opacity: 0, x: -30, duration: 0.3 });
+    gsap.to(questionText, { opacity: 0, x: -20, duration: 0.25 });
     gsap.to(optionsContainer.children, { 
       opacity: 0, 
-      x: -30, 
-      duration: 0.3, 
-      stagger: 0.05,
+      x: -20, 
+      duration: 0.25, 
+      stagger: 0.04,
       onComplete: () => {
         currentQuestionIndex++;
         if (currentQuestionIndex < questions.length) {
-          // Reset animation state for next
           gsap.set(questionText, { opacity: 1, x: 0 });
           loadQuestion();
         } else {
@@ -247,8 +249,17 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function showResults() {
-    // Progress bar to 100%
-    progressBar.style.width = "100%";
+    progressBar.style.transform = "scaleX(1)";
+    if (progressPercent) progressPercent.textContent = "100%";
+    
+    // Trigger Canvas Confetti if available
+    if (typeof confetti === 'function') {
+      confetti({
+        particleCount: 130,
+        spread: 90,
+        origin: { y: 0.6 }
+      });
+    }
     
     gsap.to(quizScreen, {
       opacity: 0,
@@ -256,7 +267,7 @@ document.addEventListener("DOMContentLoaded", () => {
       onComplete: () => {
         quizScreen.style.display = "none";
         
-        // Calculate winner
+        // Calculate category winner
         let maxScore = -1;
         let winnerCat = "ENG";
         for (const [cat, score] of Object.entries(scores)) {
@@ -271,8 +282,21 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("result-career").textContent = result.title;
         document.getElementById("result-desc").textContent = result.desc;
         
+        const careersContainer = document.getElementById("result-careers");
+        if (careersContainer) {
+          careersContainer.innerHTML = "";
+          result.careers.forEach(careerName => {
+            careersContainer.innerHTML += `
+              <div class="result-career-chip">
+                <i class="ph-bold ph-check-circle" style="color: var(--color-accent-teal);"></i>
+                ${careerName}
+              </div>
+            `;
+          });
+        }
+        
         resultsScreen.style.display = "flex";
-        gsap.fromTo(resultsScreen, { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.6, ease: "back.out(1.2)" });
+        gsap.fromTo(resultsScreen, { opacity: 0, scale: 0.94 }, { opacity: 1, scale: 1, duration: 0.5, ease: "power3.out" });
       }
     });
   }
