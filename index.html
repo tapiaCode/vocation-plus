@@ -3,155 +3,243 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vocation+ | Descubre tu Carrera ideal en Santa Cruz</title>
+  <title>VOCACIÓN+ | Tu Futuro, Tu Elección</title>
+  <meta name="description" content="Explora carreras universitarias, conoce universidades y realiza tu test vocacional en Santa Cruz, Bolivia.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
-<body>
-  <header class="header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <div class="logo-symbol"><i class="ph-bold ph-compass"></i></div>
-        <span class="logo-text">vocation+</span>
+<body class="home-body">
+
+  <!-- ============ HEADER ============ -->
+  <header class="home-header">
+    <div class="home-header-inner">
+      <a href="index.html" class="home-logo">
+        <div style="display:block; line-height:1.1;">
+          <span class="home-logo-text">VOCACIÓN</span><span class="home-logo-plus">+</span>
+        </div>
+        <span class="home-logo-tagline">TU FUTURO, TU ELECCIÓN</span>
       </a>
-      <nav class="nav-links">
-        <a href="index.html" class="nav-link active">Inicio</a>
-        <a href="carreras.html" class="nav-link">Carreras</a>
-        <a href="universidades.html" class="nav-link">Universidades</a>
-        <a href="recursos.html" class="nav-link">Recursos</a>
-        <a href="nosotros.html" class="nav-link">Nosotros</a>
+      <nav class="home-nav">
+        <a href="index.html" class="home-nav-link active">INICIO</a>
+        <a href="carreras.html" class="home-nav-link">CARRERAS</a>
+        <a href="test.html" class="home-nav-link">TEST VOCACIONAL</a>
+        <a href="universidades.html" class="home-nav-link">UNIVERSIDADES</a>
+        <a href="recursos.html" class="home-nav-link">RECURSOS</a>
+        <a href="nosotros.html" class="home-nav-link">SOBRE NOSOTROS</a>
       </nav>
-      <div class="header-cta">
-        <a href="test.html" class="btn btn-accent">Realizar Test</a>
+      <div class="home-header-actions">
+        <button class="home-icon-btn" aria-label="Buscar"><i class="ph-bold ph-magnifying-glass"></i></button>
+        <button class="home-icon-btn" aria-label="Usuario"><i class="ph-bold ph-user-circle"></i></button>
       </div>
-      <button class="mobile-menu-btn" aria-label="Abrir menú"><i class="ph-bold ph-list"></i></button>
     </div>
   </header>
 
-  <main>
-    <!-- Hero Editorial Section -->
-    <section class="hero-editorial">
-      <div class="container">
-        <div class="hero-editorial-grid">
-          <div class="hero-editorial-content gsap-fade-in">
-            <span class="badge-tag-accent" style="margin-bottom: var(--space-md);">Orientación Vocacional • Santa Cruz, Bolivia</span>
-            <h1 class="title-giant text-white" style="margin-bottom: var(--space-md);">Descubre tu verdadera pasión profesional.</h1>
-            <p class="body-lead" style="color: rgba(255,255,255,0.8); margin-bottom: var(--space-xl);">
-              Explora las universidades con mayor prestigio en Santa Cruz, comprende las demandas del mercado laboral actual y toma la decisión correcta para tu futuro.
-            </p>
-            <div class="flex gap-sm" style="flex-wrap: wrap;">
-              <a href="test.html" class="btn btn-accent">Iniciar Test Vocacional <i class="ph-bold ph-arrow-right"></i></a>
-              <a href="universidades.html" class="btn btn-ghost-dark">Ver Universidades</a>
+  <!-- ============ MAIN ============ -->
+  <main class="home-main">
+
+    <!-- HERO -->
+    <section class="hero-section">
+
+      <!-- Doodles decorativos de fondo -->
+      <div class="doodle doodle-star-1">✦</div>
+      <div class="doodle doodle-star-2">✦</div>
+      <div class="doodle doodle-star-3">★</div>
+      <div class="doodle doodle-dots">· · ·</div>
+      <div class="doodle doodle-arrow-right">→</div>
+      <div class="doodle doodle-crown">♛</div>
+      <div class="doodle doodle-smiley">☺</div>
+      <div class="doodle doodle-leaf-1">✿</div>
+      <div class="doodle doodle-x">✕</div>
+
+      <div class="hero-grid">
+
+        <!-- COL IZQUIERDA: Textos -->
+        <div class="hero-left">
+          <!-- Badge scribble -->
+          <div class="hero-badge">
+            <svg class="hero-badge-brush" viewBox="0 0 240 60" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M10,40 Q30,10 120,20 Q210,30 230,15 Q240,10 235,40 Q220,55 120,50 Q20,58 10,40 Z" fill="#C4B5FD" opacity="0.7"/>
+            </svg>
+            <span>DESCUBRE</span>
+          </div>
+          <h1 class="hero-headline">
+            TU VOCACIÓN,<br>
+            CONSTRUYE<br>
+            TU <span class="hero-highlight">FUTURO</span>
+          </h1>
+          <p class="hero-sub">
+            Explora carreras universitarias, conoce universidades,<br>
+            realiza test vocacionales y encontrá tu camino.
+          </p>
+          <div class="hero-ctas" style="flex-direction: row; display: flex; align-items: center;">
+            <a href="carreras.html" class="hero-btn hero-btn-primary" id="btn-explorar">EXPLORAR CARRERAS →</a>
+            <a href="test.html" class="hero-btn hero-btn-outline" id="btn-test">
+              <i class="ph-fill ph-list-checks" style="font-size: 1rem;"></i>
+              HACER TEST VOCACIONAL
+            </a>
+          </div>
+        </div>
+
+        <!-- COL CENTRAL: Foto de estudiantes -->
+        <div class="hero-center">
+          <div class="hero-photo-blob">
+            <svg class="hero-blob-svg" viewBox="0 0 420 420" aria-hidden="true">
+              <ellipse cx="210" cy="215" rx="185" ry="195" fill="#E9D5FF" />
+            </svg>
+            <img src="src/students_hero.jpg" alt="Tres estudiantes felices con libros" class="hero-photo">
+          </div>
+          <!-- Doodle corona sobre la foto -->
+          <div class="hero-crown" aria-hidden="true">
+            <svg viewBox="0 0 60 40" width="60" height="40">
+              <path d="M5,35 L15,10 L30,25 L45,5 L55,35 Z" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linejoin="round"/>
+              <circle cx="5" cy="35" r="3" fill="#7C3AED"/>
+              <circle cx="30" cy="35" r="3" fill="#7C3AED"/>
+              <circle cx="55" cy="35" r="3" fill="#7C3AED"/>
+            </svg>
+          </div>
+          <!-- Doodle flechas -->
+          <div class="hero-arrow-left" aria-hidden="true">←</div>
+          <div class="hero-arrow-right-2" aria-hidden="true">⟶</div>
+        </div>
+
+        <!-- COL DERECHA: Sticky note -->
+        <div class="hero-right">
+          <div class="sticky-note" role="img" aria-label="Tu futuro empieza con una decisión">
+            <!-- Línea de cinta adhesiva -->
+            <div class="sticky-tape"></div>
+            <p class="sticky-title">· TU FUTURO</p>
+            <p class="sticky-body">empieza con<br>una decisión</p>
+            <span class="sticky-heart">♥</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PANELS INFERIORES -->
+    <section class="panels-section">
+
+      <!-- Panel 1: Carreras Populares -->
+      <div class="panel" id="panel-carreras">
+        <div class="panel-header">
+          <span class="panel-icon" style="color: #F59E0B;"><i class="ph-fill ph-star-four"></i></span>
+          <h2 class="panel-title" style="--badge-bg: #A7F3D0; --badge-color: #065F46;">CARRERAS POPULARES</h2>
+        </div>
+        <div class="panel-careers-grid">
+          <a href="carreras.html" class="panel-career-item">
+            <span class="career-icon" style="color: #EF4444;"><i class="ph-fill ph-heartbeat"></i></span>
+            <span>Medicina</span>
+          </a>
+          <a href="carreras.html" class="panel-career-item">
+            <span class="career-icon" style="color: #D97706;"><i class="ph-fill ph-scales"></i></span>
+            <span>Derecho</span>
+          </a>
+          <a href="carreras.html" class="panel-career-item">
+            <span class="career-icon" style="color: #6366F1;"><i class="ph-fill ph-gear"></i></span>
+            <span>Ingeniería</span>
+          </a>
+          <a href="carreras.html" class="panel-career-item">
+            <span class="career-icon" style="color: #EC4899;"><i class="ph-fill ph-house"></i></span>
+            <span>Arquitectura</span>
+          </a>
+          <a href="carreras.html" class="panel-career-item">
+            <span class="career-icon" style="color: #8B5CF6;"><i class="ph-fill ph-brain"></i></span>
+            <span>Psicología</span>
+          </a>
+          <a href="carreras.html" class="panel-career-item">
+            <span class="career-icon" style="color: #F59E0B;"><i class="ph-fill ph-paint-brush-broad"></i></span>
+            <span>Diseño Gráfico</span>
+          </a>
+        </div>
+        <a href="carreras.html" class="panel-link" id="link-ver-carreras">VER TODAS →</a>
+      </div>
+
+      <!-- Panel 2: Test Vocacional -->
+      <div class="panel panel-center" id="panel-test">
+        <div class="panel-header">
+          <h2 class="panel-title" style="--badge-bg: #FBCFE8; --badge-color: #9D174D;">TEST VOCACIONAL</h2>
+          <span class="panel-icon" style="color: #F59E0B;"><i class="ph-fill ph-star-four"></i></span>
+        </div>
+        <p class="panel-test-desc">Responde preguntas sobre ti y descubre las carreras que más van contigo.</p>
+        <div class="panel-test-illustration" aria-hidden="true">
+          <!-- Clipboard SVG ilustración -->
+          <svg viewBox="0 0 140 160" width="140" height="160">
+            <!-- clipboard body -->
+            <rect x="15" y="25" width="110" height="125" rx="8" fill="#FFF" stroke="#333" stroke-width="2.5"/>
+            <rect x="45" y="14" width="50" height="22" rx="6" fill="#FFF" stroke="#333" stroke-width="2.5"/>
+            <!-- checklist lines -->
+            <rect x="35" y="60" width="70" height="8" rx="4" fill="#C4B5FD"/>
+            <path d="M30,64 L34,68 L42,58" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <rect x="35" y="82" width="70" height="8" rx="4" fill="#C4B5FD"/>
+            <path d="M30,86 L34,90 L42,80" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <rect x="35" y="104" width="50" height="8" rx="4" fill="#E9D5FF"/>
+            <!-- pencil -->
+            <g transform="rotate(-30, 110, 130)">
+              <rect x="100" y="100" width="14" height="45" rx="2" fill="#FCD34D" stroke="#333" stroke-width="1.5"/>
+              <polygon points="100,145 114,145 107,160" fill="#F87171" stroke="#333" stroke-width="1.5"/>
+              <rect x="100" y="100" width="14" height="8" rx="2" fill="#9CA3AF" stroke="#333" stroke-width="1.5"/>
+            </g>
+            <!-- heart doodle -->
+            <text x="20" y="130" font-size="16" fill="#F87171">♥</text>
+            <!-- question mark -->
+            <text x="28" y="80" font-size="20" fill="#7C3AED" font-weight="bold">?</text>
+          </svg>
+        </div>
+        <a href="test.html" class="panel-link panel-link-pink" id="link-hacer-test">HACER TEST →</a>
+      </div>
+
+      <!-- Panel 3: Universidades Destacadas -->
+      <div class="panel" id="panel-universidades">
+        <div class="panel-header">
+          <span class="panel-icon" style="color: #06B6D4;"><i class="ph-bold ph-dots-three"></i></span>
+          <h2 class="panel-title" style="--badge-bg: #BFDBFE; --badge-color: #1E3A8A;">UNIVERSIDADES DESTACADAS</h2>
+          <span class="panel-icon" style="color: #F59E0B;"><i class="ph-fill ph-star-four"></i></span>
+        </div>
+        <div class="panel-uni-list">
+          <div class="panel-uni-item">
+            <div class="uni-logo-circle">
+              <img src="src/uagrm.webp" alt="UAGRM" onerror="this.style.display='none'">
+              <span class="uni-logo-fallback">U</span>
             </div>
-          </div>
-
-          <div class="hero-editorial-image gsap-fade-in">
-            <img src="src/portada.webp" alt="Estudiantes universitarios en Santa Cruz">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Editorial Feature Block -->
-    <section class="section" style="background-color: var(--color-bg-subtle);">
-      <div class="container">
-        <div class="grid grid-cols-2 gap-xl items-center gsap-fade-in">
-          <div>
-            <h2 class="title-large" style="margin-bottom: var(--space-md);">Toma decisiones informadas sobre tu vocación.</h2>
-            <p class="body-lead" style="margin-bottom: var(--space-lg);">
-              La elección de una carrera universitaria define tus próximos años de desarrollo personal y profesional. En vocation+ concentramos la información más completa y actualizada de la educación superior en nuestro departamento.
-            </p>
-            <div class="flex gap-md" style="margin-top: var(--space-lg);">
-              <div>
-                <h3 class="title-medium text-accent">6+</h3>
-                <p class="body-regular">Universidades Destacadas</p>
-              </div>
-              <div style="border-left: 1px solid var(--color-border); padding-left: var(--space-md);">
-                <h3 class="title-medium text-accent">20</h3>
-                <p class="body-regular">Preguntas de Evaluación</p>
-              </div>
-              <div style="border-left: 1px solid var(--color-border); padding-left: var(--space-md);">
-                <h3 class="title-medium text-accent">100%</h3>
-                <p class="body-regular">Información Verificada</p>
-              </div>
+            <div class="uni-info">
+              <p class="uni-name">Universidad Autónoma<br><strong>Gabriel René Moreno</strong></p>
+              <p class="uni-city">Santa Cruz</p>
             </div>
+            <a href="universidades.html" class="uni-btn" id="btn-uagrm">VER MÁS</a>
           </div>
-
-          <div style="border-radius: var(--radius-xl); overflow: hidden; height: 480px; box-shadow: var(--shadow-card);">
-            <img src="src/uagrm.webp" alt="Universidad en Santa Cruz" style="width: 100%; height: 100%; object-fit: cover;">
+          <div class="panel-uni-item">
+            <div class="uni-logo-circle">
+              <img src="src/upsa.webp" alt="UPSA" onerror="this.style.display='none'">
+              <span class="uni-logo-fallback">U</span>
+            </div>
+            <div class="uni-info">
+              <p class="uni-name">Universidad Privada<br><strong>de Santa Cruz (UPSA)</strong></p>
+              <p class="uni-city">Santa Cruz</p>
+            </div>
+            <a href="universidades.html" class="uni-btn" id="btn-upsa">VER MÁS</a>
+          </div>
+          <div class="panel-uni-item">
+            <div class="uni-logo-circle">
+              <img src="src/ucb.webp" alt="UCB" onerror="this.style.display='none'">
+              <span class="uni-logo-fallback">U</span>
+            </div>
+            <div class="uni-info">
+              <p class="uni-name">Universidad Católica<br><strong>Boliviana "San Pablo"</strong></p>
+              <p class="uni-city">Santa Cruz</p>
+            </div>
+            <a href="universidades.html" class="uni-btn" id="btn-ucb">VER MÁS</a>
           </div>
         </div>
+        <a href="universidades.html" class="panel-link" id="link-ver-unis">VER TODAS →</a>
       </div>
+
     </section>
 
-    <!-- Grid Services / Features -->
-    <section class="section">
-      <div class="container text-center gsap-fade-in" style="margin-bottom: var(--space-2xl);">
-        <h2 class="title-large">Todo lo que necesitas en un solo lugar</h2>
-        <p class="body-lead" style="max-width: 600px; margin: var(--space-sm) auto 0;">Herramientas y guías diseñadas especialmente para bachilleres de Santa Cruz.</p>
-      </div>
-
-      <div class="container">
-        <div class="grid grid-cols-3 gap-lg gsap-stagger-container">
-          
-          <div class="card-premium gsap-stagger-item">
-            <div class="logo-symbol" style="background: var(--color-accent-teal); margin-bottom: var(--space-md);"><i class="ph-bold ph-brain"></i></div>
-            <h3 class="title-small" style="margin-bottom: var(--space-xs);">Test Vocacional BTH</h3>
-            <p class="body-regular">Evaluación directa de 20 preguntas sin registro obligatorio para descubrir tus áreas afines.</p>
-          </div>
-
-          <div class="card-premium gsap-stagger-item">
-            <div class="logo-symbol" style="background: var(--color-brand-dark); margin-bottom: var(--space-md);"><i class="ph-bold ph-buildings"></i></div>
-            <h3 class="title-small" style="margin-bottom: var(--space-xs);">Oferta Académica Real</h3>
-            <p class="body-regular">Información detallada de la UAGRM, UPSA, UCB, UTEPSA, UPDS y UCEBOL con ubicaciones y carreras.</p>
-          </div>
-
-          <div class="card-premium gsap-stagger-item">
-            <div class="logo-symbol" style="background: var(--color-accent-amber); margin-bottom: var(--space-md);"><i class="ph-bold ph-book-bookmark"></i></div>
-            <h3 class="title-small" style="margin-bottom: var(--space-xs);">Guías del Bachiller</h3>
-            <p class="body-regular">Requisitos de inscripción, exámenes de suficiencia académica (PSA/PAB) y becas disponibles.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- BTH Project Callout -->
-    <section class="section" style="background-color: var(--color-brand-dark); color: #FFFFFF;">
-      <div class="container text-center gsap-fade-in">
-        <span class="badge-tag-accent" style="margin-bottom: var(--space-md);">Bachillerato Técnico Humanístico</span>
-        <h2 class="title-large text-white" style="margin-bottom: var(--space-md);">Un proyecto hecho por y para estudiantes.</h2>
-        <p class="body-lead" style="color: rgba(255,255,255,0.8); max-width: 700px; margin: 0 auto var(--space-xl);">
-          Desarrollado como Proyecto de Grado BTH por los estudiantes de 6to de Secundaria: <strong>Elias Montero Montero</strong> y <strong>Juana Maria Nova Nova</strong> en Santa Cruz de la Sierra.
-        </p>
-        <a href="nosotros.html" class="btn btn-accent">Conocer al Equipo Proyectista <i class="ph-bold ph-arrow-right"></i></a>
-      </div>
-    </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="flex justify-between items-center" style="flex-wrap: wrap; gap: var(--space-md);">
-        <a href="index.html" class="logo" style="color: white;">
-          <div class="logo-symbol" style="background: rgba(255,255,255,0.15);"><i class="ph-bold ph-compass"></i></div>
-          <span class="logo-text text-white">vocation+</span>
-        </a>
-        <div class="nav-links">
-          <a href="index.html" class="nav-link text-white">Inicio</a>
-          <a href="carreras.html" class="nav-link text-white">Carreras</a>
-          <a href="universidades.html" class="nav-link text-white">Universidades</a>
-          <a href="recursos.html" class="nav-link text-white">Recursos</a>
-          <a href="nosotros.html" class="nav-link text-white">Nosotros</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 vocation+. Proyecto Educativo BTH - Santa Cruz de la Sierra, Bolivia.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="js/main.js"></script>
 </body>
 </html>

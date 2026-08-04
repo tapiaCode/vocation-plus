@@ -3,87 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recursos | vocation+</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>VOCACIÓN+ | Recursos</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
   <header class="header">
     <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <div class="logo-icon"><i class="ph-bold ph-compass"></i></div>
-        <span class="logo-text">vocation+</span>
-      </a>
+      <a href="index.html" class="logo">VOCACIÓN<span class="logo-plus">+</span></a>
       <nav class="nav-links">
         <a href="index.html" class="nav-link">Inicio</a>
         <a href="carreras.html" class="nav-link">Carreras</a>
+        <a href="test.html" class="nav-link">Test</a>
         <a href="universidades.html" class="nav-link">Universidades</a>
-        <a href="recursos.html" class="nav-link active">Recursos</a>
-        <a href="nosotros.html" class="nav-link">Nosotros</a>
+        <a href="recursos.html" class="nav-link">Recursos</a>
+        <a href="nosotros.html" class="nav-link">Contacto</a>
       </nav>
-      <div class="header-cta">
-        <a href="test.html" class="btn btn-primary btn-pill">Realizar Test</a>
-      </div>
-      <button class="mobile-menu-btn"><i class="ph-bold ph-list"></i></button>
     </div>
   </header>
 
-  <main>
-    <section class="section" style="padding-top: calc(80px + var(--space-3xl));">
-      <div class="container text-center gsap-fade-in" style="margin-bottom: var(--space-2xl);">
-        <h1 class="display-lg">Recursos Adicionales</h1>
-        <p class="body-lg" style="max-width: 600px; margin: var(--space-md) auto 0;">Artículos, guías completas y testimonios que te ayudarán a tomar la mejor decisión para tu futuro.</p>
-      </div>
+  <main class="container section">
+    <h1 class="title-page" style="margin-bottom: var(--space-xl);">Recursos de Estudio</h1>
 
-      <div class="container">
-        <!-- Bento Grid para Recursos -->
-        <div class="grid grid-cols-2 gap-lg gsap-stagger-container">
-          
-          <a href="guia-bachiller.html" class="card gsap-stagger-item" style="text-decoration: none; display: flex; flex-direction: column; padding: 0; overflow: hidden; grid-row: span 2;">
-            <img src="src/resource_guide_1785555829574.jpg" alt="Guía de Orientación" class="image-cover" style="height: 350px;">
-            <div style="padding: var(--space-lg); background: var(--color-primary-container); color: white; flex: 1;">
-              <div class="label-md" style="color: var(--color-secondary); margin-bottom: var(--space-sm);">Guía Oficial Cruceña</div>
-              <h3 class="headline-lg" style="margin-bottom: var(--space-md);">Guía del Bachiller 2026</h3>
-              <p class="body-lg" style="color: rgba(255,255,255,0.7); margin-bottom: var(--space-lg);">Todo sobre admisión UAGRM (PSA/PAB), universidades privadas, becas de excelencia y requisitos de titulación.</p>
-              <span class="btn btn-outline btn-pill" style="color: white; border-color: rgba(255,255,255,0.3);">Leer Guía Completa <i class="ph-bold ph-arrow-right"></i></span>
-            </div>
+    <div style="display: flex; gap: var(--space-sm); margin-bottom: var(--space-xl); flex-wrap: wrap;">
+      <button class="tag tag-active" style="border: none; cursor: pointer; font-size: 1rem;">Todos</button>
+      <button class="tag tag-inactive" style="border: none; cursor: pointer; font-size: 1rem;">Guías</button>
+      <button class="tag tag-inactive" style="border: none; cursor: pointer; font-size: 1rem;">Artículos</button>
+      <button class="tag tag-inactive" style="border: none; cursor: pointer; font-size: 1rem;">Testimonios</button>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: var(--space-lg);">
+      
+      <!-- Card 1 -->
+      <div style="background: var(--color-bg-base); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); border: 1px solid var(--color-border); display: flex; flex-direction: column;">
+        <img src="src/resource_guide_1785555829574.jpg" alt="Guía del Bachiller" style="width: 100%; height: 200px; object-fit: cover;">
+        <div style="padding: var(--space-lg); flex-grow: 1; display: flex; flex-direction: column;">
+          <span class="tag tag-active" style="align-self: flex-start; margin-bottom: var(--space-sm); font-size: 0.8rem; padding: 4px 10px;">Guía</span>
+          <h3 class="title-card" style="margin-bottom: var(--space-xs);">Guía del Bachiller 2026</h3>
+          <p class="body-regular" style="color: var(--color-text-light); margin-bottom: var(--space-md); flex-grow: 1;">
+            Todo sobre admisión UAGRM (PSA/PAB), universidades privadas, becas de excelencia y requisitos de titulación.
+          </p>
+          <a href="#" style="color: var(--color-primary); font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 4px;">
+            Leer más <i class="ph-bold ph-arrow-right"></i>
           </a>
-
-          <a href="entrevistas.html" class="card gsap-stagger-item" style="text-decoration: none; padding: 0; overflow: hidden; position: relative;">
-            <img src="src/resource_video_1785555841058.jpg" alt="Entrevistas" class="image-cover" style="position: absolute; inset: 0; z-index: 1;">
-            <div style="position: relative; z-index: 2; padding: var(--space-lg); background: linear-gradient(to right, rgba(0,0,0,0.85), transparent); height: 100%; color: white; display: flex; flex-direction: column; justify-content: flex-end; min-height: 250px;">
-              <div class="label-md" style="color: var(--color-secondary); margin-bottom: var(--space-sm);">Testimonios Reales</div>
-              <h3 class="headline-md" style="margin-bottom: var(--space-xs);">Voces Universitarias de Santa Cruz</h3>
-              <p class="body-md" style="color: rgba(255,255,255,0.8);">Experiencias de estudiantes de UAGRM, UPSA, UCB y UCEBOL.</p>
-            </div>
-          </a>
-
-          <a href="test.html" class="card gsap-stagger-item" style="text-decoration: none; background: var(--color-surface-container); border: none; display: flex; align-items: center; justify-content: center; text-align: center; min-height: 250px;">
-            <div>
-              <i class="ph-bold ph-brain" style="font-size: 48px; color: var(--color-primary); margin-bottom: var(--space-sm);"></i>
-              <h3 class="headline-md" style="color: var(--color-text-main);">Test Vocacional BTH</h3>
-              <p class="body-md" style="margin-top: var(--space-sm);">Descubre tu perfil académico en 20 preguntas.</p>
-            </div>
-          </a>
-
         </div>
       </div>
-    </section>
-  </main>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-bottom">
-        <p>&copy; 2026 vocation+. Proyecto Educativo BTH - Santa Cruz de la Sierra, Bolivia.</p>
+      <!-- Card 2 -->
+      <div style="background: var(--color-bg-base); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); border: 1px solid var(--color-border); display: flex; flex-direction: column;">
+        <img src="src/resource_video_1785555841058.jpg" alt="Entrevistas" style="width: 100%; height: 200px; object-fit: cover;">
+        <div style="padding: var(--space-lg); flex-grow: 1; display: flex; flex-direction: column;">
+          <span class="tag tag-active" style="align-self: flex-start; margin-bottom: var(--space-sm); font-size: 0.8rem; padding: 4px 10px;">Testimonios</span>
+          <h3 class="title-card" style="margin-bottom: var(--space-xs);">Voces Universitarias</h3>
+          <p class="body-regular" style="color: var(--color-text-light); margin-bottom: var(--space-md); flex-grow: 1;">
+            Experiencias de estudiantes de UAGRM, UPSA, UCB y UCEBOL sobre su primer año de estudios.
+          </p>
+          <a href="#" style="color: var(--color-primary); font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 4px;">
+            Leer más <i class="ph-bold ph-arrow-right"></i>
+          </a>
+        </div>
       </div>
-    </div>
-  </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="js/main.js"></script>
+      <!-- Card 3 -->
+      <div style="background: var(--color-bg-base); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); border: 1px solid var(--color-border); display: flex; flex-direction: column;">
+        <img src="src/category_business_1785555733765.jpg" alt="Artículo sobre negocios" style="width: 100%; height: 200px; object-fit: cover;">
+        <div style="padding: var(--space-lg); flex-grow: 1; display: flex; flex-direction: column;">
+          <span class="tag tag-active" style="align-self: flex-start; margin-bottom: var(--space-sm); font-size: 0.8rem; padding: 4px 10px;">Artículo</span>
+          <h3 class="title-card" style="margin-bottom: var(--space-xs);">El mercado laboral actual</h3>
+          <p class="body-regular" style="color: var(--color-text-light); margin-bottom: var(--space-md); flex-grow: 1;">
+            Descubre cuáles son las profesiones con mayor demanda laboral y proyección económica.
+          </p>
+          <a href="#" style="color: var(--color-primary); font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 4px;">
+            Leer más <i class="ph-bold ph-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
 </body>
 </html>
