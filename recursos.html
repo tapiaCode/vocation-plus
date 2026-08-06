@@ -3,83 +3,151 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VOCACIÓN+ | Recursos</title>
+  <title>RECURSOS | VOCACIÓN+</title>
+  <meta name="description" content="Guías, entrevistas y artículos para el futuro profesional del estudiante secundario cruceño.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
-<body>
-  <header class="header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">VOCACIÓN<span class="logo-plus">+</span></a>
-      <nav class="nav-links">
-        <a href="index.html" class="nav-link">Inicio</a>
-        <a href="carreras.html" class="nav-link">Carreras</a>
-        <a href="test.html" class="nav-link">Test</a>
-        <a href="universidades.html" class="nav-link">Universidades</a>
-        <a href="recursos.html" class="nav-link">Recursos</a>
-        <a href="nosotros.html" class="nav-link">Contacto</a>
+<body class="home-body">
+
+  <!-- ============ HEADER ============ -->
+  <header class="home-header">
+    <div class="home-header-inner">
+      <a href="index.html" class="home-logo">
+        <div style="display:block; line-height:1.1;">
+          <span class="home-logo-text">VOCACIÓN</span><span class="home-logo-plus">+</span>
+        </div>
+        <span class="home-logo-tagline">TU FUTURO, TU ELECCIÓN</span>
+      </a>
+      <nav class="home-nav">
+        <a href="index.html" class="home-nav-link">INICIO</a>
+        <a href="carreras.html" class="home-nav-link">CARRERAS</a>
+        <a href="test.html" class="home-nav-link">TEST VOCACIONAL</a>
+        <a href="universidades.html" class="home-nav-link">UNIVERSIDADES</a>
+        <a href="recursos.html" class="home-nav-link active">RECURSOS</a>
+        <a href="nosotros.html" class="home-nav-link">SOBRE NOSOTROS</a>
       </nav>
     </div>
   </header>
 
-  <main class="container section">
-    <h1 class="title-page" style="margin-bottom: var(--space-xl);">Recursos de Estudio</h1>
+  <!-- ============ MAIN ============ -->
+  <main class="home-main">
 
-    <div style="display: flex; gap: var(--space-sm); margin-bottom: var(--space-xl); flex-wrap: wrap;">
-      <button class="tag tag-active" style="border: none; cursor: pointer; font-size: 1rem;">Todos</button>
-      <button class="tag tag-inactive" style="border: none; cursor: pointer; font-size: 1rem;">Guías</button>
-      <button class="tag tag-inactive" style="border: none; cursor: pointer; font-size: 1rem;">Artículos</button>
-      <button class="tag tag-inactive" style="border: none; cursor: pointer; font-size: 1rem;">Testimonios</button>
+    <!-- PAGE BANNER -->
+    <section class="page-banner">
+      <div class="page-banner-content">
+        <div class="panel-title" style="--badge-bg: #FCD34D; --badge-color: #92400E; display: inline-block; margin-bottom: 12px;">
+          APRENDIZAJE & CONSEJOS
+        </div>
+        <h1 class="page-title">Recursos de Estudio</h1>
+        <p class="page-subtitle">
+          Guías oficiales de admisión, testimonios universitarios y análisis del mercado laboral en Santa Cruz de la Sierra.
+        </p>
+      </div>
+    </section>
+
+    <!-- FILTER PILLS -->
+    <div class="filter-pills-group">
+      <button class="filter-pill active">Todos los Recursos</button>
+      <a href="guia-bachiller.html" class="filter-pill">Guía del Bachiller</a>
+      <a href="entrevistas.html" class="filter-pill">Testimonios</a>
+      <button class="filter-pill">Artículos de Interés</button>
     </div>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: var(--space-lg);">
+    <!-- GRID DE RECURSOS -->
+    <section style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;">
       
-      <!-- Card 1 -->
-      <div style="background: var(--color-bg-base); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); border: 1px solid var(--color-border); display: flex; flex-direction: column;">
-        <img src="src/resource_guide_1785555829574.jpg" alt="Guía del Bachiller" style="width: 100%; height: 200px; object-fit: cover;">
-        <div style="padding: var(--space-lg); flex-grow: 1; display: flex; flex-direction: column;">
-          <span class="tag tag-active" style="align-self: flex-start; margin-bottom: var(--space-sm); font-size: 0.8rem; padding: 4px 10px;">Guía</span>
-          <h3 class="title-card" style="margin-bottom: var(--space-xs);">Guía del Bachiller 2026</h3>
-          <p class="body-regular" style="color: var(--color-text-light); margin-bottom: var(--space-md); flex-grow: 1;">
-            Todo sobre admisión UAGRM (PSA/PAB), universidades privadas, becas de excelencia y requisitos de titulación.
+      <!-- Card 1: Guía del Bachiller -->
+      <div class="resource-card">
+        <img src="src/resource_guide_1785555829574.jpg" alt="Guía del Bachiller" class="resource-card-img">
+        <div class="resource-card-content">
+          <div class="panel-title" style="--badge-bg: #A7F3D0; --badge-color: #065F46; align-self: flex-start; margin-bottom: 12px; font-size: 0.75rem;">
+            GUÍA OFICIAL
+          </div>
+          <h3 class="resource-card-title">Guía del Bachiller 2026</h3>
+          <p class="resource-card-desc">
+            Requisitos de admisión a la UAGRM (PSA/PAB), universidades privadas, becas de excelencia y trámites obligatorios de titulación.
           </p>
-          <a href="#" style="color: var(--color-primary); font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 4px;">
-            Leer más <i class="ph-bold ph-arrow-right"></i>
+          <a href="guia-bachiller.html" class="hero-btn hero-btn-primary" style="align-self: flex-start;">
+            LEER GUÍA COMPLETA →
           </a>
         </div>
       </div>
 
-      <!-- Card 2 -->
-      <div style="background: var(--color-bg-base); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); border: 1px solid var(--color-border); display: flex; flex-direction: column;">
-        <img src="src/resource_video_1785555841058.jpg" alt="Entrevistas" style="width: 100%; height: 200px; object-fit: cover;">
-        <div style="padding: var(--space-lg); flex-grow: 1; display: flex; flex-direction: column;">
-          <span class="tag tag-active" style="align-self: flex-start; margin-bottom: var(--space-sm); font-size: 0.8rem; padding: 4px 10px;">Testimonios</span>
-          <h3 class="title-card" style="margin-bottom: var(--space-xs);">Voces Universitarias</h3>
-          <p class="body-regular" style="color: var(--color-text-light); margin-bottom: var(--space-md); flex-grow: 1;">
-            Experiencias de estudiantes de UAGRM, UPSA, UCB y UCEBOL sobre su primer año de estudios.
+      <!-- Card 2: Entrevistas / Voces -->
+      <div class="resource-card">
+        <img src="src/resource_video_1785555841058.jpg" alt="Entrevistas Universitarias" class="resource-card-img">
+        <div class="resource-card-content">
+          <div class="panel-title" style="--badge-bg: #FBCFE8; --badge-color: #9D174D; align-self: flex-start; margin-bottom: 12px; font-size: 0.75rem;">
+            TESTIMONIOS
+          </div>
+          <h3 class="resource-card-title">Voces Universitarias</h3>
+          <p class="resource-card-desc">
+            Experiencias reales de estudiantes de cursos superiores en la UAGRM, UPSA, UCB y UCEBOL sobre su primer año universitario.
           </p>
-          <a href="#" style="color: var(--color-primary); font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 4px;">
-            Leer más <i class="ph-bold ph-arrow-right"></i>
+          <a href="entrevistas.html" class="hero-btn hero-btn-outline" style="align-self: flex-start;">
+            VER TESTIMONIOS →
           </a>
         </div>
       </div>
 
-      <!-- Card 3 -->
-      <div style="background: var(--color-bg-base); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); border: 1px solid var(--color-border); display: flex; flex-direction: column;">
-        <img src="src/category_business_1785555733765.jpg" alt="Artículo sobre negocios" style="width: 100%; height: 200px; object-fit: cover;">
-        <div style="padding: var(--space-lg); flex-grow: 1; display: flex; flex-direction: column;">
-          <span class="tag tag-active" style="align-self: flex-start; margin-bottom: var(--space-sm); font-size: 0.8rem; padding: 4px 10px;">Artículo</span>
-          <h3 class="title-card" style="margin-bottom: var(--space-xs);">El mercado laboral actual</h3>
-          <p class="body-regular" style="color: var(--color-text-light); margin-bottom: var(--space-md); flex-grow: 1;">
-            Descubre cuáles son las profesiones con mayor demanda laboral y proyección económica.
+      <!-- Card 3: Mercado Laboral -->
+      <div class="resource-card">
+        <img src="src/category_business_1785555733765.jpg" alt="Artículo sobre Mercado Laboral" class="resource-card-img">
+        <div class="resource-card-content">
+          <div class="panel-title" style="--badge-bg: #BFDBFE; --badge-color: #1E3A8A; align-self: flex-start; margin-bottom: 12px; font-size: 0.75rem;">
+            ARTÍCULO
+          </div>
+          <h3 class="resource-card-title">El Mercado Laboral Actual</h3>
+          <p class="resource-card-desc">
+            Descubre las profesiones con mayor demanda laboral, crecimiento constante y oportunidad económica en nuestro departamento.
           </p>
-          <a href="#" style="color: var(--color-primary); font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 4px;">
-            Leer más <i class="ph-bold ph-arrow-right"></i>
+          <a href="#" class="hero-btn hero-btn-outline" style="align-self: flex-start;">
+            LEER ARTÍCULO →
           </a>
         </div>
       </div>
 
-    </div>
+    </section>
+
   </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="home-footer">
+    <div class="home-footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">VOCACIÓN<span>+</span></a>
+        <p class="footer-desc">
+          Plataforma de orientación vocacional creada por y para estudiantes en Santa Cruz de la Sierra, Bolivia. Proyecto Educativo BTH 2026.
+        </p>
+      </div>
+      <div>
+        <h4 class="footer-title">NAVEGACIÓN</h4>
+        <div class="footer-links">
+          <a href="index.html" class="footer-link">Inicio</a>
+          <a href="carreras.html" class="footer-link">Carreras Universitarias</a>
+          <a href="test.html" class="footer-link">Test Vocacional</a>
+          <a href="universidades.html" class="footer-link">Universidades</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-title">RECURSOS & MÁS</h4>
+        <div class="footer-links">
+          <a href="recursos.html" class="footer-link">Guías y Artículos</a>
+          <a href="guia-bachiller.html" class="footer-link">Guía del Bachiller</a>
+          <a href="entrevistas.html" class="footer-link">Voces Universitarias</a>
+          <a href="nosotros.html" class="footer-link">Sobre Nosotros (BTH)</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 VOCACIÓN+ | Proyecto Bachillerato Técnico Humanístico (BTH) - Santa Cruz de la Sierra, Bolivia.</p>
+    </div>
+  </footer>
+
 </body>
 </html>

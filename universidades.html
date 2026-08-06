@@ -3,163 +3,181 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VOCACIÓN+ | Universidades</title>
+  <title>UNIVERSIDADES | VOCACIÓN+</title>
+  <meta name="description" content="Directorio completo de universidades públicas y privadas en Santa Cruz de la Sierra, Bolivia.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
-<body>
-  <header class="header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">VOCACIÓN<span class="logo-plus">+</span></a>
-      <nav class="nav-links">
-        <a href="index.html" class="nav-link">Inicio</a>
-        <a href="carreras.html" class="nav-link">Carreras</a>
-        <a href="test.html" class="nav-link">Test</a>
-        <a href="universidades.html" class="nav-link">Universidades</a>
-        <a href="recursos.html" class="nav-link">Recursos</a>
-        <a href="nosotros.html" class="nav-link">Contacto</a>
+<body class="home-body">
+
+  <!-- ============ HEADER ============ -->
+  <header class="home-header">
+    <div class="home-header-inner">
+      <a href="index.html" class="home-logo">
+        <div style="display:block; line-height:1.1;">
+          <span class="home-logo-text">VOCACIÓN</span><span class="home-logo-plus">+</span>
+        </div>
+        <span class="home-logo-tagline">TU FUTURO, TU ELECCIÓN</span>
+      </a>
+      <nav class="home-nav">
+        <a href="index.html" class="home-nav-link">INICIO</a>
+        <a href="carreras.html" class="home-nav-link">CARRERAS</a>
+        <a href="test.html" class="home-nav-link">TEST VOCACIONAL</a>
+        <a href="universidades.html" class="home-nav-link active">UNIVERSIDADES</a>
+        <a href="recursos.html" class="home-nav-link">RECURSOS</a>
+        <a href="nosotros.html" class="home-nav-link">SOBRE NOSOTROS</a>
       </nav>
     </div>
   </header>
 
-  <main class="container section">
-    <div class="flex-between" style="margin-bottom: var(--space-xl);">
-      <h1 class="title-page" style="margin-bottom: 0;">Directorio de Universidades</h1>
-      <div class="search-container">
-        <i class="ph ph-magnifying-glass search-icon"></i>
-        <input type="text" class="search-input" placeholder="Buscar universidad...">
-      </div>
-    </div>
+  <!-- ============ MAIN ============ -->
+  <main class="home-main">
 
-    <div style="display: flex; flex-direction: column; gap: var(--space-md);">
-      
-      <!-- UAGRM -->
-      <div class="uni-list-card">
-        <div class="uni-list-img-wrapper">
-          <img src="src/uagrm.webp" alt="Campus UAGRM">
+    <!-- PAGE BANNER -->
+    <section class="page-banner">
+      <div class="page-banner-content">
+        <div class="panel-title" style="--badge-bg: #BFDBFE; --badge-color: #1E3A8A; display: inline-block; margin-bottom: 12px;">
+          SANTA CRUZ, BOLIVIA
         </div>
-        <div class="uni-list-info">
-          <h2 class="title-card" style="margin-bottom: 8px;">UAGRM - Universidad Autónoma Gabriel René Moreno</h2>
-          <div style="display: flex; gap: var(--space-md); color: var(--color-text-light); font-size: 0.95rem;">
-            <span style="display: inline-flex; align-items: center; gap: 4px;">
-              <i class="ph ph-map-pin"></i> Av. Busch, Ciudad Universitaria
-            </span>
-            <span style="display: inline-flex; align-items: center; gap: 4px;">
-              <i class="ph ph-buildings"></i> Pública
-            </span>
+        <h1 class="page-title">Directorio de Universidades</h1>
+        <p class="page-subtitle">
+          Conoce la oferta académica, ubicaciones y modalidad de las principales casas de estudios superiores públicas y privadas.
+        </p>
+      </div>
+      <div class="playful-search-wrapper">
+        <i class="ph ph-magnifying-glass playful-search-icon"></i>
+        <input type="text" class="playful-search-input" placeholder="Buscar universidad (ej. UAGRM)...">
+      </div>
+    </section>
+
+    <!-- LISTA DE UNIVERSIDADES -->
+    <section class="panel">
+      <div class="panel-header">
+        <span class="panel-icon" style="color: #06B6D4;"><i class="ph-bold ph-buildings"></i></span>
+        <h2 class="panel-title" style="--badge-bg: #BFDBFE; --badge-color: #1E3A8A;">INSTITUCIONES DE EDUCACIÓN SUPERIOR</h2>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 8px;">
+        
+        <!-- UAGRM -->
+        <div class="uni-card-full">
+          <img src="src/uagrm.webp" alt="Campus UAGRM" class="uni-card-thumb" onerror="this.src='src/uagrm.webp'">
+          <div class="uni-card-body">
+            <h2 class="uni-card-title">UAGRM - Universidad Autónoma Gabriel René Moreno</h2>
+            <div class="uni-card-meta">
+              <span><i class="ph-fill ph-map-pin" style="color: #7C3AED;"></i> Av. Busch, Ciudad Universitaria</span>
+              <span><i class="ph-fill ph-buildings" style="color: #059669;"></i> Pública</span>
+            </div>
           </div>
+          <a href="https://www.uagrm.edu.bo/" target="_blank" class="uni-btn">VER MÁS →</a>
         </div>
-        <div class="uni-list-action">
-          <a href="https://www.uagrm.edu.bo/" target="_blank" class="btn btn-primary">Ver información</a>
-        </div>
-      </div>
 
-      <!-- UPSA -->
-      <div class="uni-list-card">
-        <div class="uni-list-img-wrapper">
-          <img src="src/upsa.webp" alt="Campus UPSA">
-        </div>
-        <div class="uni-list-info">
-          <h2 class="title-card" style="margin-bottom: 8px;">UPSA - Universidad Privada de Santa Cruz de la Sierra</h2>
-          <div style="display: flex; gap: var(--space-md); color: var(--color-text-light); font-size: 0.95rem;">
-            <span style="display: inline-flex; align-items: center; gap: 4px;">
-              <i class="ph ph-map-pin"></i> Av. Paraguá y 4to. Anillo
-            </span>
-            <span style="display: inline-flex; align-items: center; gap: 4px;">
-              <i class="ph ph-buildings"></i> Privada
-            </span>
+        <!-- UPSA -->
+        <div class="uni-card-full">
+          <img src="src/upsa.webp" alt="Campus UPSA" class="uni-card-thumb" onerror="this.src='src/upsa.webp'">
+          <div class="uni-card-body">
+            <h2 class="uni-card-title">UPSA - Universidad Privada de Santa Cruz de la Sierra</h2>
+            <div class="uni-card-meta">
+              <span><i class="ph-fill ph-map-pin" style="color: #7C3AED;"></i> Av. Paraguá y 4to. Anillo</span>
+              <span><i class="ph-fill ph-buildings" style="color: #2563EB;"></i> Privada</span>
+            </div>
           </div>
+          <a href="https://www.upsa.edu.bo/" target="_blank" class="uni-btn">VER MÁS →</a>
         </div>
-        <div class="uni-list-action">
-          <a href="https://www.upsa.edu.bo/" target="_blank" class="btn btn-primary">Ver información</a>
-        </div>
-      </div>
 
-      <!-- UCB -->
-      <div class="uni-list-card">
-        <div class="uni-list-img-wrapper">
-          <img src="src/ucb.webp" alt="Campus UCB">
-        </div>
-        <div class="uni-list-info">
-          <h2 class="title-card" style="margin-bottom: 8px;">UCB - Universidad Católica Boliviana "San Pablo"</h2>
-          <div style="display: flex; gap: var(--space-md); color: var(--color-text-light); font-size: 0.95rem;">
-            <span style="display: inline-flex; align-items: center; gap: 4px;">
-              <i class="ph ph-map-pin"></i> Km 9, Carretera al Norte
-            </span>
-            <span style="display: inline-flex; align-items: center; gap: 4px;">
-              <i class="ph ph-buildings"></i> Privada
-            </span>
+        <!-- UCB -->
+        <div class="uni-card-full">
+          <img src="src/ucb.webp" alt="Campus UCB" class="uni-card-thumb" onerror="this.src='src/ucb.webp'">
+          <div class="uni-card-body">
+            <h2 class="uni-card-title">UCB - Universidad Católica Boliviana "San Pablo"</h2>
+            <div class="uni-card-meta">
+              <span><i class="ph-fill ph-map-pin" style="color: #7C3AED;"></i> Km 9, Carretera al Norte</span>
+              <span><i class="ph-fill ph-buildings" style="color: #2563EB;"></i> Privada</span>
+            </div>
           </div>
+          <a href="https://scz.ucb.edu.bo/" target="_blank" class="uni-btn">VER MÁS →</a>
         </div>
-        <div class="uni-list-action">
-          <a href="https://scz.ucb.edu.bo/" target="_blank" class="btn btn-primary">Ver información</a>
-        </div>
-      </div>
 
-      <!-- UTEPSA -->
-      <div class="uni-list-card">
-        <div class="uni-list-img-wrapper">
-          <img src="src/utepsa.webp" alt="Campus UTEPSA">
-        </div>
-        <div class="uni-list-info">
-          <h2 class="title-card" style="margin-bottom: 8px;">UTEPSA - Universidad Tecnológica Privada de Santa Cruz</h2>
-          <div style="display: flex; gap: var(--space-md); color: var(--color-text-light); font-size: 0.95rem;">
-            <span style="display: inline-flex; align-items: center; gap: 4px;">
-              <i class="ph ph-map-pin"></i> 3er Anillo e/ Av. San Aurelio
-            </span>
-            <span style="display: inline-flex; align-items: center; gap: 4px;">
-              <i class="ph ph-buildings"></i> Privada
-            </span>
+        <!-- UTEPSA -->
+        <div class="uni-card-full">
+          <img src="src/utepsa.webp" alt="Campus UTEPSA" class="uni-card-thumb" onerror="this.src='src/utepsa.webp'">
+          <div class="uni-card-body">
+            <h2 class="uni-card-title">UTEPSA - Universidad Tecnológica Privada de Santa Cruz</h2>
+            <div class="uni-card-meta">
+              <span><i class="ph-fill ph-map-pin" style="color: #7C3AED;"></i> 3er Anillo e/ Av. San Aurelio</span>
+              <span><i class="ph-fill ph-buildings" style="color: #2563EB;"></i> Privada</span>
+            </div>
           </div>
+          <a href="https://www.utepsa.edu/" target="_blank" class="uni-btn">VER MÁS →</a>
         </div>
-        <div class="uni-list-action">
-          <a href="https://www.utepsa.edu/" target="_blank" class="btn btn-primary">Ver información</a>
-        </div>
-      </div>
 
-      <!-- UPDS -->
-      <div class="uni-list-card">
-        <div class="uni-list-img-wrapper">
-          <img src="src/upds.webp" alt="Campus UPDS">
-        </div>
-        <div class="uni-list-info">
-          <h2 class="title-card" style="margin-bottom: 8px;">UPDS - Universidad Privada Domingo Savio</h2>
-          <div style="display: flex; gap: var(--space-md); color: var(--color-text-light); font-size: 0.95rem;">
-            <span style="display: inline-flex; align-items: center; gap: 4px;">
-              <i class="ph ph-map-pin"></i> 3er Anillo e/ Av. Beni
-            </span>
-            <span style="display: inline-flex; align-items: center; gap: 4px;">
-              <i class="ph ph-buildings"></i> Privada
-            </span>
+        <!-- UPDS -->
+        <div class="uni-card-full">
+          <img src="src/upds.webp" alt="Campus UPDS" class="uni-card-thumb" onerror="this.src='src/upds.webp'">
+          <div class="uni-card-body">
+            <h2 class="uni-card-title">UPDS - Universidad Privada Domingo Savio</h2>
+            <div class="uni-card-meta">
+              <span><i class="ph-fill ph-map-pin" style="color: #7C3AED;"></i> 3er Anillo e/ Av. Beni</span>
+              <span><i class="ph-fill ph-buildings" style="color: #2563EB;"></i> Privada</span>
+            </div>
           </div>
+          <a href="https://www.upds.edu.bo/" target="_blank" class="uni-btn">VER MÁS →</a>
         </div>
-        <div class="uni-list-action">
-          <a href="https://www.upds.edu.bo/" target="_blank" class="btn btn-primary">Ver información</a>
-        </div>
-      </div>
 
-      <!-- UCEBOL -->
-      <div class="uni-list-card">
-        <div class="uni-list-img-wrapper">
-          <img src="src/ucebol.webp" alt="Campus UCEBOL">
-        </div>
-        <div class="uni-list-info">
-          <h2 class="title-card" style="margin-bottom: 8px;">UCEBOL - Universidad Cristiana de Bolivia</h2>
-          <div style="display: flex; gap: var(--space-md); color: var(--color-text-light); font-size: 0.95rem;">
-            <span style="display: inline-flex; align-items: center; gap: 4px;">
-              <i class="ph ph-map-pin"></i> Av. Cristo Redentor Km 6.5
-            </span>
-            <span style="display: inline-flex; align-items: center; gap: 4px;">
-              <i class="ph ph-buildings"></i> Privada
-            </span>
+        <!-- UCEBOL -->
+        <div class="uni-card-full">
+          <img src="src/ucebol.webp" alt="Campus UCEBOL" class="uni-card-thumb" onerror="this.src='src/ucebol.webp'">
+          <div class="uni-card-body">
+            <h2 class="uni-card-title">UCEBOL - Universidad Cristiana de Bolivia</h2>
+            <div class="uni-card-meta">
+              <span><i class="ph-fill ph-map-pin" style="color: #7C3AED;"></i> Av. Cristo Redentor Km 6.5</span>
+              <span><i class="ph-fill ph-buildings" style="color: #2563EB;"></i> Privada</span>
+            </div>
           </div>
+          <a href="https://www.ucebol.edu.bo/" target="_blank" class="uni-btn">VER MÁS →</a>
         </div>
-        <div class="uni-list-action">
-          <a href="https://www.ucebol.edu.bo/" target="_blank" class="btn btn-primary">Ver información</a>
-        </div>
-      </div>
 
-    </div>
+      </div>
+    </section>
+
   </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="home-footer">
+    <div class="home-footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">VOCACIÓN<span>+</span></a>
+        <p class="footer-desc">
+          Plataforma de orientación vocacional creada por y para estudiantes en Santa Cruz de la Sierra, Bolivia. Proyecto Educativo BTH 2026.
+        </p>
+      </div>
+      <div>
+        <h4 class="footer-title">NAVEGACIÓN</h4>
+        <div class="footer-links">
+          <a href="index.html" class="footer-link">Inicio</a>
+          <a href="carreras.html" class="footer-link">Carreras Universitarias</a>
+          <a href="test.html" class="footer-link">Test Vocacional</a>
+          <a href="universidades.html" class="footer-link">Universidades</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-title">RECURSOS & MÁS</h4>
+        <div class="footer-links">
+          <a href="recursos.html" class="footer-link">Guías y Artículos</a>
+          <a href="guia-bachiller.html" class="footer-link">Guía del Bachiller</a>
+          <a href="entrevistas.html" class="footer-link">Voces Universitarias</a>
+          <a href="nosotros.html" class="footer-link">Sobre Nosotros (BTH)</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 VOCACIÓN+ | Proyecto Bachillerato Técnico Humanístico (BTH) - Santa Cruz de la Sierra, Bolivia.</p>
+    </div>
+  </footer>
+
 </body>
 </html>

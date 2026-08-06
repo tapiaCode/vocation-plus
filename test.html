@@ -3,92 +3,165 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VOCACIÓN+ | Test Vocacional</title>
+  <title>TEST VOCACIONAL | VOCACIÓN+</title>
+  <meta name="description" content="Realiza el test vocacional interactivo y descubre tu profesión ideal en Santa Cruz, Bolivia.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <!-- Canvas Confetti CDN -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
-<body>
-  <header class="header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">VOCACIÓN<span class="logo-plus">+</span></a>
-      <nav class="nav-links">
-        <a href="index.html" class="nav-link">Inicio</a>
-        <a href="carreras.html" class="nav-link">Carreras</a>
-        <a href="test.html" class="nav-link">Test</a>
-        <a href="universidades.html" class="nav-link">Universidades</a>
-        <a href="recursos.html" class="nav-link">Recursos</a>
-        <a href="nosotros.html" class="nav-link">Contacto</a>
+<body class="home-body">
+
+  <!-- ============ HEADER ============ -->
+  <header class="home-header">
+    <div class="home-header-inner">
+      <a href="index.html" class="home-logo">
+        <div style="display:block; line-height:1.1;">
+          <span class="home-logo-text">VOCACIÓN</span><span class="home-logo-plus">+</span>
+        </div>
+        <span class="home-logo-tagline">TU FUTURO, TU ELECCIÓN</span>
+      </a>
+      <nav class="home-nav">
+        <a href="index.html" class="home-nav-link">INICIO</a>
+        <a href="carreras.html" class="home-nav-link">CARRERAS</a>
+        <a href="test.html" class="home-nav-link active">TEST VOCACIONAL</a>
+        <a href="universidades.html" class="home-nav-link">UNIVERSIDADES</a>
+        <a href="recursos.html" class="home-nav-link">RECURSOS</a>
+        <a href="nosotros.html" class="home-nav-link">SOBRE NOSOTROS</a>
       </nav>
     </div>
   </header>
 
-  <main class="container section">
-    <div style="max-width: 800px; margin: 0 auto; background: var(--color-bg-base); border-radius: var(--radius-xl); box-shadow: var(--shadow-card); border: 1px solid var(--color-border); padding: var(--space-2xl);">
+  <!-- ============ MAIN ============ -->
+  <main class="home-main">
+
+    <!-- PAGE BANNER -->
+    <section class="page-banner">
+      <div class="page-banner-content">
+        <div class="panel-title" style="--badge-bg: #FBCFE8; --badge-color: #9D174D; display: inline-block; margin-bottom: 12px;">
+          EVALUACIÓN RÁPIDA
+        </div>
+        <h1 class="page-title">Test Vocacional Interactivo</h1>
+        <p class="page-subtitle">
+          Responde estas sencillas preguntas sobre tus habilidades y preferencias para descubrir las áreas de estudio ideales para ti.
+        </p>
+      </div>
+    </section>
+
+    <!-- QUIZ CONTAINER CARD -->
+    <section class="panel" style="max-width: 860px; margin: 0 auto;">
       
       <!-- Start Screen -->
-      <div id="intro-container" class="text-center">
-        <div style="display: flex; flex-direction: column; align-items: center;">
-          <h1 class="title-page" style="margin-bottom: var(--space-sm);">Test Vocacional</h1>
-          <p class="body-large" style="margin-bottom: var(--space-xl); max-width: 500px; margin-inline: auto;">
-            Descubre qué carreras se adaptan mejor a tus intereses y habilidades con nuestro test rápido.
+      <div id="intro-container" style="text-align: center; padding: 24px 12px;">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 16px;">
+          <div style="width: 72px; height: 72px; border-radius: 50%; background: #F5F3FF; color: #7C3AED; display: flex; align-items: center; justify-content: center; font-size: 2rem;">
+            <i class="ph-fill ph-list-checks"></i>
+          </div>
+          <h2 style="font-family: 'Fredoka', sans-serif; font-size: 1.8rem; color: #1a1a2e;">¿Listo para empezar tu test?</h2>
+          <p style="font-family: 'Nunito', sans-serif; color: #6B7280; max-width: 500px; line-height: 1.6;">
+            Solo te tomará un par de minutos. Elige las respuestas que mejor te describan y obtendrás tus recomendaciones universitarias al instante.
           </p>
-          <button id="start-btn" class="btn btn-primary">Comenzar Evaluación</button>
+          <button id="start-btn" class="hero-btn hero-btn-primary" style="font-size: 1rem; padding: 14px 28px; margin-top: 8px;">
+            COMENZAR EVALUACIÓN →
+          </button>
         </div>
       </div>
 
       <!-- Quiz Screen -->
       <div id="quiz-container" style="display: none;">
-        <h2 class="title-section test-header">Test Vocacional</h2>
+        <div class="panel-header" style="justify-content: space-between;">
+          <h2 class="panel-title" style="--badge-bg: #E9D5FF; --badge-color: #7C3AED;">TEST VOCACIONAL</h2>
+          <span id="question-counter" style="font-family: 'Fredoka', sans-serif; font-weight: 600; color: #7C3AED; font-size: 0.95rem;">
+            Pregunta 1 de 10
+          </span>
+        </div>
         
-        <div class="progress-container">
-          <span id="question-counter" class="progress-label">Pregunta 1 de 10</span>
-          <div class="progress-bar-bg">
-            <div id="progress-bar" class="progress-bar-fill" style="width: 0%;"></div>
+        <div class="progress-container" style="margin-top: 16px; margin-bottom: 24px;">
+          <div class="progress-bar-bg" style="background: #E9D5FF; height: 10px; border-radius: 9999px;">
+            <div id="progress-bar" class="progress-bar-fill" style="width: 0%; background: #7C3AED; height: 100%; border-radius: 9999px; transition: width 0.3s ease;"></div>
           </div>
-          <span id="progress-percent" style="display: none;">0%</span> <!-- Hidden but kept for JS compatibility -->
+          <span id="progress-percent" style="display: none;">0%</span>
         </div>
 
-        <h3 id="question-text" class="title-card" style="margin-top: var(--space-xl); margin-bottom: var(--space-lg); font-size: 1.25rem;">
+        <h3 id="question-text" style="font-family: 'Fredoka', sans-serif; font-size: 1.35rem; color: #1a1a2e; margin-bottom: 20px;">
           Cargando pregunta...
         </h3>
         
-        <div id="options-container" style="margin-bottom: var(--space-xl);">
+        <div id="options-container" style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px;">
           <!-- Options injected by JS -->
         </div>
 
-        <div class="text-right">
-          <button id="next-btn" class="btn btn-primary">Siguiente &rarr;</button>
+        <div style="text-align: right;">
+          <button id="next-btn" class="hero-btn hero-btn-primary">SIGUIENTE →</button>
         </div>
       </div>
 
       <!-- Result Screen -->
-      <div id="result-container" class="text-center" style="display: none;">
+      <div id="result-container" style="display: none; text-align: center; padding: 20px 12px;">
         <div style="display: flex; flex-direction: column; align-items: center;">
-          <div style="color: #10B981; font-size: 32px; margin-bottom: var(--space-xs);">
+          <div style="color: #10B981; font-size: 3rem; margin-bottom: 8px;">
             <i class="ph-fill ph-check-circle"></i>
           </div>
-          <h2 class="title-section" style="margin-bottom: var(--space-xs);">¡Este es tu resultado!</h2>
-          <p class="body-regular" style="margin-bottom: var(--space-xl);">
-            Estas carreras se adaptan a tus intereses y habilidades.
+          <h2 style="font-family: 'Fredoka', sans-serif; font-size: 2rem; color: #1a1a2e; margin-bottom: 8px;">
+            ¡Este es tu resultado!
+          </h2>
+          <p style="font-family: 'Nunito', sans-serif; color: #6B7280; max-width: 500px; margin-bottom: 24px;">
+            Estas carreras se adaptan perfectamente a tus intereses y fortalezas.
           </p>
           
           <h3 id="result-career" style="display: none;"></h3>
           <p id="result-desc" style="display: none;"></p>
           
-          <div id="result-careers" class="careers-grid" style="text-align: left; margin-bottom: var(--space-xl); width: 100%;">
+          <div id="result-careers" class="careers-grid" style="text-align: left; margin-bottom: 28px; width: 100%;">
             <!-- Career cards injected by JS -->
           </div>
 
           <div>
-            <a href="carreras.html" class="btn btn-primary">Ver más carreras</a>
+            <a href="carreras.html" class="hero-btn hero-btn-primary">EXPLORAR MÁS CARRERAS →</a>
           </div>
         </div>
       </div>
 
-    </div>
+    </section>
+
   </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="home-footer">
+    <div class="home-footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">VOCACIÓN<span>+</span></a>
+        <p class="footer-desc">
+          Plataforma de orientación vocacional creada por y para estudiantes en Santa Cruz de la Sierra, Bolivia. Proyecto Educativo BTH 2026.
+        </p>
+      </div>
+      <div>
+        <h4 class="footer-title">NAVEGACIÓN</h4>
+        <div class="footer-links">
+          <a href="index.html" class="footer-link">Inicio</a>
+          <a href="carreras.html" class="footer-link">Carreras Universitarias</a>
+          <a href="test.html" class="footer-link">Test Vocacional</a>
+          <a href="universidades.html" class="footer-link">Universidades</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-title">RECURSOS & MÁS</h4>
+        <div class="footer-links">
+          <a href="recursos.html" class="footer-link">Guías y Artículos</a>
+          <a href="guia-bachiller.html" class="footer-link">Guía del Bachiller</a>
+          <a href="entrevistas.html" class="footer-link">Voces Universitarias</a>
+          <a href="nosotros.html" class="footer-link">Sobre Nosotros (BTH)</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 VOCACIÓN+ | Proyecto Bachillerato Técnico Humanístico (BTH) - Santa Cruz de la Sierra, Bolivia.</p>
+    </div>
+  </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="js/test.js"></script>

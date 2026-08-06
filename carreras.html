@@ -3,99 +3,165 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VOCACIÓN+ | Carreras</title>
+  <title>CARRERAS | VOCACIÓN+</title>
+  <meta name="description" content="Explora carreras universitarias en Santa Cruz, Bolivia con el portal VOCACIÓN+.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
-<body>
-  <header class="header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">VOCACIÓN<span class="logo-plus">+</span></a>
-      <nav class="nav-links">
-        <a href="index.html" class="nav-link">Inicio</a>
-        <a href="carreras.html" class="nav-link">Carreras</a>
-        <a href="test.html" class="nav-link">Test</a>
-        <a href="universidades.html" class="nav-link">Universidades</a>
-        <a href="recursos.html" class="nav-link">Recursos</a>
-        <a href="nosotros.html" class="nav-link">Contacto</a>
+<body class="home-body">
+
+  <!-- ============ HEADER ============ -->
+  <header class="home-header">
+    <div class="home-header-inner">
+      <a href="index.html" class="home-logo">
+        <div style="display:block; line-height:1.1;">
+          <span class="home-logo-text">VOCACIÓN</span><span class="home-logo-plus">+</span>
+        </div>
+        <span class="home-logo-tagline">TU FUTURO, TU ELECCIÓN</span>
+      </a>
+      <nav class="home-nav">
+        <a href="index.html" class="home-nav-link">INICIO</a>
+        <a href="carreras.html" class="home-nav-link active">CARRERAS</a>
+        <a href="test.html" class="home-nav-link">TEST VOCACIONAL</a>
+        <a href="universidades.html" class="home-nav-link">UNIVERSIDADES</a>
+        <a href="recursos.html" class="home-nav-link">RECURSOS</a>
+        <a href="nosotros.html" class="home-nav-link">SOBRE NOSOTROS</a>
       </nav>
     </div>
   </header>
 
-  <main class="container section">
-    <div class="flex-between" style="margin-bottom: var(--space-xl);">
-      <h1 class="title-page" style="margin-bottom: 0;">Carreras Universitarias</h1>
-      <div class="search-container">
-        <i class="ph ph-magnifying-glass search-icon"></i>
-        <input type="text" class="search-input" placeholder="Buscar carrera...">
+  <!-- ============ MAIN ============ -->
+  <main class="home-main">
+
+    <!-- PAGE BANNER -->
+    <section class="page-banner">
+      <div class="page-banner-content">
+        <div class="panel-title" style="--badge-bg: #A7F3D0; --badge-color: #065F46; display: inline-block; margin-bottom: 12px;">
+          EXPLORA TU CAMINO
+        </div>
+        <h1 class="page-title">Carreras Universitarias</h1>
+        <p class="page-subtitle">
+          Descubre las opciones profesionales ofertadas por las universidades de Santa Cruz. Filtra por tus áreas de interés.
+        </p>
+      </div>
+      <div class="playful-search-wrapper">
+        <i class="ph ph-magnifying-glass playful-search-icon"></i>
+        <input type="text" class="playful-search-input" placeholder="Buscar carrera (ej. Medicina)...">
+      </div>
+    </section>
+
+    <!-- GRID DE CARRERAS -->
+    <section class="panel">
+      <div class="panel-header">
+        <span class="panel-icon" style="color: #7C3AED;"><i class="ph-fill ph-circles-four"></i></span>
+        <h2 class="panel-title" style="--badge-bg: #E9D5FF; --badge-color: #7C3AED;">TODAS LAS ÁREAS DE ESTUDIO</h2>
+      </div>
+
+      <div class="careers-grid" style="margin-top: 8px;">
+        <!-- Ingeniería -->
+        <a href="#" class="career-card" style="border: 2px solid #E9D5FF; border-radius: 16px; padding: 20px 16px;">
+          <div class="career-icon-wrapper" style="color: #2563EB; background: #EFF6FF; width: 56px; height: 56px; border-radius: 14px;">
+            <i class="ph-fill ph-gear"></i>
+          </div>
+          <span class="title-card" style="font-family: 'Fredoka', sans-serif; color: #1a1a2e; margin-top: 6px;">Ingeniería</span>
+        </a>
+
+        <!-- Medicina -->
+        <a href="#" class="career-card" style="border: 2px solid #E9D5FF; border-radius: 16px; padding: 20px 16px;">
+          <div class="career-icon-wrapper" style="color: #EF4444; background: #FEF2F2; width: 56px; height: 56px; border-radius: 14px;">
+            <i class="ph-fill ph-heartbeat"></i>
+          </div>
+          <span class="title-card" style="font-family: 'Fredoka', sans-serif; color: #1a1a2e; margin-top: 6px;">Medicina</span>
+        </a>
+
+        <!-- Psicología -->
+        <a href="#" class="career-card" style="border: 2px solid #E9D5FF; border-radius: 16px; padding: 20px 16px;">
+          <div class="career-icon-wrapper" style="color: #EC4899; background: #FDF2F8; width: 56px; height: 56px; border-radius: 14px;">
+            <i class="ph-fill ph-brain"></i>
+          </div>
+          <span class="title-card" style="font-family: 'Fredoka', sans-serif; color: #1a1a2e; margin-top: 6px;">Psicología</span>
+        </a>
+
+        <!-- Derecho -->
+        <a href="#" class="career-card" style="border: 2px solid #E9D5FF; border-radius: 16px; padding: 20px 16px;">
+          <div class="career-icon-wrapper" style="color: #D97706; background: #FFFBEB; width: 56px; height: 56px; border-radius: 14px;">
+            <i class="ph-fill ph-scales"></i>
+          </div>
+          <span class="title-card" style="font-family: 'Fredoka', sans-serif; color: #1a1a2e; margin-top: 6px;">Derecho</span>
+        </a>
+
+        <!-- Arquitectura -->
+        <a href="#" class="career-card" style="border: 2px solid #E9D5FF; border-radius: 16px; padding: 20px 16px;">
+          <div class="career-icon-wrapper" style="color: #8B5CF6; background: #F5F3FF; width: 56px; height: 56px; border-radius: 14px;">
+            <i class="ph-fill ph-house"></i>
+          </div>
+          <span class="title-card" style="font-family: 'Fredoka', sans-serif; color: #1a1a2e; margin-top: 6px;">Arquitectura</span>
+        </a>
+
+        <!-- Educación -->
+        <a href="#" class="career-card" style="border: 2px solid #E9D5FF; border-radius: 16px; padding: 20px 16px;">
+          <div class="career-icon-wrapper" style="color: #10B981; background: #ECFDF5; width: 56px; height: 56px; border-radius: 14px;">
+            <i class="ph-fill ph-chalkboard-teacher"></i>
+          </div>
+          <span class="title-card" style="font-family: 'Fredoka', sans-serif; color: #1a1a2e; margin-top: 6px;">Educación</span>
+        </a>
+
+        <!-- Comunicación -->
+        <a href="#" class="career-card" style="border: 2px solid #E9D5FF; border-radius: 16px; padding: 20px 16px;">
+          <div class="career-icon-wrapper" style="color: #06B6D4; background: #ECFEFF; width: 56px; height: 56px; border-radius: 14px;">
+            <i class="ph-fill ph-megaphone"></i>
+          </div>
+          <span class="title-card" style="font-family: 'Fredoka', sans-serif; color: #1a1a2e; margin-top: 6px;">Comunicación</span>
+        </a>
+
+        <!-- Diseño Gráfico -->
+        <a href="#" class="career-card" style="border: 2px solid #E9D5FF; border-radius: 16px; padding: 20px 16px;">
+          <div class="career-icon-wrapper" style="color: #F59E0B; background: #FFFBEB; width: 56px; height: 56px; border-radius: 14px;">
+            <i class="ph-fill ph-paint-brush-broad"></i>
+          </div>
+          <span class="title-card" style="font-family: 'Fredoka', sans-serif; color: #1a1a2e; margin-top: 6px;">Diseño Gráfico</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="home-footer">
+    <div class="home-footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">VOCACIÓN<span>+</span></a>
+        <p class="footer-desc">
+          Plataforma de orientación vocacional creada por y para estudiantes en Santa Cruz de la Sierra, Bolivia. Proyecto Educativo BTH 2026.
+        </p>
+      </div>
+      <div>
+        <h4 class="footer-title">NAVEGACIÓN</h4>
+        <div class="footer-links">
+          <a href="index.html" class="footer-link">Inicio</a>
+          <a href="carreras.html" class="footer-link">Carreras Universitarias</a>
+          <a href="test.html" class="footer-link">Test Vocacional</a>
+          <a href="universidades.html" class="footer-link">Universidades</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-title">RECURSOS & MÁS</h4>
+        <div class="footer-links">
+          <a href="recursos.html" class="footer-link">Guías y Artículos</a>
+          <a href="guia-bachiller.html" class="footer-link">Guía del Bachiller</a>
+          <a href="entrevistas.html" class="footer-link">Voces Universitarias</a>
+          <a href="nosotros.html" class="footer-link">Sobre Nosotros (BTH)</a>
+        </div>
       </div>
     </div>
-
-    <div class="careers-grid">
-      <!-- Ingeniería -->
-      <a href="#" class="career-card">
-        <div class="career-icon-wrapper" style="color: #3B82F6; background: #EFF6FF;">
-          <i class="ph-fill ph-gear"></i>
-        </div>
-        <span class="title-card">Ingeniería</span>
-      </a>
-
-      <!-- Medicina -->
-      <a href="#" class="career-card">
-        <div class="career-icon-wrapper" style="color: #EF4444; background: #FEF2F2;">
-          <i class="ph-fill ph-heartbeat"></i>
-        </div>
-        <span class="title-card">Medicina</span>
-      </a>
-
-      <!-- Psicología -->
-      <a href="#" class="career-card">
-        <div class="career-icon-wrapper" style="color: #EC4899; background: #FDF2F8;">
-          <i class="ph-fill ph-brain"></i>
-        </div>
-        <span class="title-card">Psicología</span>
-      </a>
-
-      <!-- Derecho -->
-      <a href="#" class="career-card">
-        <div class="career-icon-wrapper" style="color: #D97706; background: #FFFBEB;">
-          <i class="ph-fill ph-scales"></i>
-        </div>
-        <span class="title-card">Derecho</span>
-      </a>
-
-      <!-- Arquitectura -->
-      <a href="#" class="career-card">
-        <div class="career-icon-wrapper" style="color: #2563EB; background: #EFF6FF;">
-          <i class="ph-fill ph-buildings"></i>
-        </div>
-        <span class="title-card">Arquitectura</span>
-      </a>
-
-      <!-- Educación -->
-      <a href="#" class="career-card">
-        <div class="career-icon-wrapper" style="color: #10B981; background: #ECFDF5;">
-          <i class="ph-fill ph-chalkboard-teacher"></i>
-        </div>
-        <span class="title-card">Educación</span>
-      </a>
-
-      <!-- Comunicación -->
-      <a href="#" class="career-card">
-        <div class="career-icon-wrapper" style="color: #8B5CF6; background: #F5F3FF;">
-          <i class="ph-fill ph-megaphone"></i>
-        </div>
-        <span class="title-card">Comunicación</span>
-      </a>
-
-      <!-- Diseño Gráfico -->
-      <a href="#" class="career-card">
-        <div class="career-icon-wrapper" style="color: #F59E0B; background: #FFFBEB;">
-          <i class="ph-fill ph-paint-brush-broad"></i>
-        </div>
-        <span class="title-card">Diseño Gráfico</span>
-      </a>
+    <div class="footer-bottom">
+      <p>&copy; 2026 VOCACIÓN+ | Proyecto Bachillerato Técnico Humanístico (BTH) - Santa Cruz de la Sierra, Bolivia.</p>
     </div>
-  </main>
+  </footer>
+
 </body>
 </html>
