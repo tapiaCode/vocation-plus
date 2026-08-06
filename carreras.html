@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CARRERAS | VOCACIÓN+</title>
-  <meta name="description" content="Explora carreras universitarias en Santa Cruz, Bolivia con el portal VOCACIÓN+.">
+  <meta name="description" content="Explora carreras universitarias en Santa Cruz, Bolivia: mallas curriculares, información general y universidades donde estudiar.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -41,11 +41,11 @@
     <section class="page-banner">
       <div class="page-banner-content">
         <div class="panel-title" style="--badge-bg: #A7F3D0; --badge-color: #065F46; display: inline-block; margin-bottom: 12px;">
-          EXPLORA TU CAMINO
+          INFORMACIÓN & MALLAS CURRICULARES
         </div>
         <h1 class="page-title">Carreras Universitarias</h1>
         <p class="page-subtitle">
-          Descubre las opciones profesionales ofertadas por las universidades de Santa Cruz. Filtra por tus áreas de interés.
+          Haz clic en cualquier carrera para desplegar su información general, plan de estudios (malla curricular por semestres) y las universidades de Santa Cruz que la ofrecen.
         </p>
       </div>
       <div class="playful-search-wrapper">
@@ -58,77 +58,97 @@
     <section class="panel">
       <div class="panel-header">
         <span class="panel-icon" style="color: #7C3AED;"><i class="ph-fill ph-circles-four"></i></span>
-        <h2 class="panel-title" style="--badge-bg: #E9D5FF; --badge-color: #7C3AED;">TODAS LAS ÁREAS DE ESTUDIO</h2>
+        <h2 class="panel-title" style="--badge-bg: #E9D5FF; --badge-color: #7C3AED;">HAZ CLIC EN UNA CARRERA PARA VER SU MALLA</h2>
       </div>
 
       <div class="careers-grid" style="margin-top: 8px;">
-        <!-- Ingeniería -->
-        <a href="#" class="career-card" style="border: 2px solid #E9D5FF; border-radius: 16px; padding: 20px 16px;">
+        <!-- Ingeniería de Sistemas -->
+        <a href="#" data-career="ingenieria" class="career-card" style="border: 2px solid #E9D5FF; border-radius: 16px; padding: 20px 16px; cursor: pointer; text-decoration: none;">
           <div class="career-icon-wrapper" style="color: #2563EB; background: #EFF6FF; width: 56px; height: 56px; border-radius: 14px;">
             <i class="ph-fill ph-gear"></i>
           </div>
-          <span class="title-card" style="font-family: 'Fredoka', sans-serif; color: #1a1a2e; margin-top: 6px;">Ingeniería</span>
+          <span class="title-card" style="font-family: 'Fredoka', sans-serif; color: #1a1a2e; margin-top: 6px;">Ingeniería de Sistemas</span>
+          <span style="font-family: 'Nunito', sans-serif; font-size: 0.78rem; color: #7C3AED; font-weight: 700; margin-top: 2px;">VER MALLA →</span>
         </a>
 
         <!-- Medicina -->
-        <a href="#" class="career-card" style="border: 2px solid #E9D5FF; border-radius: 16px; padding: 20px 16px;">
+        <a href="#" data-career="medicina" class="career-card" style="border: 2px solid #E9D5FF; border-radius: 16px; padding: 20px 16px; cursor: pointer; text-decoration: none;">
           <div class="career-icon-wrapper" style="color: #EF4444; background: #FEF2F2; width: 56px; height: 56px; border-radius: 14px;">
             <i class="ph-fill ph-heartbeat"></i>
           </div>
-          <span class="title-card" style="font-family: 'Fredoka', sans-serif; color: #1a1a2e; margin-top: 6px;">Medicina</span>
+          <span class="title-card" style="font-family: 'Fredoka', sans-serif; color: #1a1a2e; margin-top: 6px;">Medicina Humana</span>
+          <span style="font-family: 'Nunito', sans-serif; font-size: 0.78rem; color: #7C3AED; font-weight: 700; margin-top: 2px;">VER MALLA →</span>
         </a>
 
         <!-- Psicología -->
-        <a href="#" class="career-card" style="border: 2px solid #E9D5FF; border-radius: 16px; padding: 20px 16px;">
+        <a href="#" data-career="psicologia" class="career-card" style="border: 2px solid #E9D5FF; border-radius: 16px; padding: 20px 16px; cursor: pointer; text-decoration: none;">
           <div class="career-icon-wrapper" style="color: #EC4899; background: #FDF2F8; width: 56px; height: 56px; border-radius: 14px;">
             <i class="ph-fill ph-brain"></i>
           </div>
           <span class="title-card" style="font-family: 'Fredoka', sans-serif; color: #1a1a2e; margin-top: 6px;">Psicología</span>
+          <span style="font-family: 'Nunito', sans-serif; font-size: 0.78rem; color: #7C3AED; font-weight: 700; margin-top: 2px;">VER MALLA →</span>
         </a>
 
         <!-- Derecho -->
-        <a href="#" class="career-card" style="border: 2px solid #E9D5FF; border-radius: 16px; padding: 20px 16px;">
+        <a href="#" data-career="derecho" class="career-card" style="border: 2px solid #E9D5FF; border-radius: 16px; padding: 20px 16px; cursor: pointer; text-decoration: none;">
           <div class="career-icon-wrapper" style="color: #D97706; background: #FFFBEB; width: 56px; height: 56px; border-radius: 14px;">
             <i class="ph-fill ph-scales"></i>
           </div>
-          <span class="title-card" style="font-family: 'Fredoka', sans-serif; color: #1a1a2e; margin-top: 6px;">Derecho</span>
+          <span class="title-card" style="font-family: 'Fredoka', sans-serif; color: #1a1a2e; margin-top: 6px;">Derecho y Jurídicas</span>
+          <span style="font-family: 'Nunito', sans-serif; font-size: 0.78rem; color: #7C3AED; font-weight: 700; margin-top: 2px;">VER MALLA →</span>
         </a>
 
         <!-- Arquitectura -->
-        <a href="#" class="career-card" style="border: 2px solid #E9D5FF; border-radius: 16px; padding: 20px 16px;">
+        <a href="#" data-career="arquitectura" class="career-card" style="border: 2px solid #E9D5FF; border-radius: 16px; padding: 20px 16px; cursor: pointer; text-decoration: none;">
           <div class="career-icon-wrapper" style="color: #8B5CF6; background: #F5F3FF; width: 56px; height: 56px; border-radius: 14px;">
             <i class="ph-fill ph-house"></i>
           </div>
           <span class="title-card" style="font-family: 'Fredoka', sans-serif; color: #1a1a2e; margin-top: 6px;">Arquitectura</span>
+          <span style="font-family: 'Nunito', sans-serif; font-size: 0.78rem; color: #7C3AED; font-weight: 700; margin-top: 2px;">VER MALLA →</span>
         </a>
 
         <!-- Educación -->
-        <a href="#" class="career-card" style="border: 2px solid #E9D5FF; border-radius: 16px; padding: 20px 16px;">
+        <a href="#" data-career="educacion" class="career-card" style="border: 2px solid #E9D5FF; border-radius: 16px; padding: 20px 16px; cursor: pointer; text-decoration: none;">
           <div class="career-icon-wrapper" style="color: #10B981; background: #ECFDF5; width: 56px; height: 56px; border-radius: 14px;">
             <i class="ph-fill ph-chalkboard-teacher"></i>
           </div>
-          <span class="title-card" style="font-family: 'Fredoka', sans-serif; color: #1a1a2e; margin-top: 6px;">Educación</span>
+          <span class="title-card" style="font-family: 'Fredoka', sans-serif; color: #1a1a2e; margin-top: 6px;">Educación y Pedagogía</span>
+          <span style="font-family: 'Nunito', sans-serif; font-size: 0.78rem; color: #7C3AED; font-weight: 700; margin-top: 2px;">VER MALLA →</span>
         </a>
 
         <!-- Comunicación -->
-        <a href="#" class="career-card" style="border: 2px solid #E9D5FF; border-radius: 16px; padding: 20px 16px;">
+        <a href="#" data-career="comunicacion" class="career-card" style="border: 2px solid #E9D5FF; border-radius: 16px; padding: 20px 16px; cursor: pointer; text-decoration: none;">
           <div class="career-icon-wrapper" style="color: #06B6D4; background: #ECFEFF; width: 56px; height: 56px; border-radius: 14px;">
             <i class="ph-fill ph-megaphone"></i>
           </div>
-          <span class="title-card" style="font-family: 'Fredoka', sans-serif; color: #1a1a2e; margin-top: 6px;">Comunicación</span>
+          <span class="title-card" style="font-family: 'Fredoka', sans-serif; color: #1a1a2e; margin-top: 6px;">Comunicación Social</span>
+          <span style="font-family: 'Nunito', sans-serif; font-size: 0.78rem; color: #7C3AED; font-weight: 700; margin-top: 2px;">VER MALLA →</span>
         </a>
 
         <!-- Diseño Gráfico -->
-        <a href="#" class="career-card" style="border: 2px solid #E9D5FF; border-radius: 16px; padding: 20px 16px;">
+        <a href="#" data-career="diseno" class="career-card" style="border: 2px solid #E9D5FF; border-radius: 16px; padding: 20px 16px; cursor: pointer; text-decoration: none;">
           <div class="career-icon-wrapper" style="color: #F59E0B; background: #FFFBEB; width: 56px; height: 56px; border-radius: 14px;">
             <i class="ph-fill ph-paint-brush-broad"></i>
           </div>
           <span class="title-card" style="font-family: 'Fredoka', sans-serif; color: #1a1a2e; margin-top: 6px;">Diseño Gráfico</span>
+          <span style="font-family: 'Nunito', sans-serif; font-size: 0.78rem; color: #7C3AED; font-weight: 700; margin-top: 2px;">VER MALLA →</span>
         </a>
       </div>
     </section>
 
   </main>
+
+  <!-- MODAL DE DETALLE DE CARRERA -->
+  <div id="career-modal-overlay" class="career-modal-overlay">
+    <div class="career-modal-card">
+      <button id="modal-close-btn" class="modal-close-btn" aria-label="Cerrar modal">
+        <i class="ph-bold ph-x"></i>
+      </button>
+      <div id="career-modal-container">
+        <!-- Content injected dynamically by js/carreras.js -->
+      </div>
+    </div>
+  </div>
 
   <!-- ============ FOOTER ============ -->
   <footer class="home-footer">
@@ -163,6 +183,7 @@
     </div>
   </footer>
 
+  <script src="js/carreras.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
