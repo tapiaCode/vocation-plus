@@ -35,12 +35,20 @@ document.addEventListener('DOMContentLoaded', () => {
   // Accordion Item Toggle (For Guía del Bachiller)
   const accordionHeaders = document.querySelectorAll('.accordion-header, .playful-accordion-header');
   accordionHeaders.forEach(header => {
-    header.addEventListener('click', () => {
-      const item = header.parentElement;
+    header.addEventListener('click', (e) => {
+      e.preventDefault();
+      const item = header.closest('.accordion-item, .playful-accordion-item');
+      if (!item) return;
+
       const isOpen = item.classList.contains('active');
       
-      // Close all accordions in same group
-      document.querySelectorAll('.accordion-item, .playful-accordion-item').forEach(i => i.classList.remove('active'));
+      // Close all siblings
+      const parentContainer = item.parentElement;
+      if (parentContainer) {
+        parentContainer.querySelectorAll('.accordion-item, .playful-accordion-item').forEach(i => {
+          i.classList.remove('active');
+        });
+      }
       
       if (!isOpen) {
         item.classList.add('active');

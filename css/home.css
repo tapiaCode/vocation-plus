@@ -1049,3 +1049,89 @@
     justify-content: center;
   }
 }
+
+/* ── ESTILOS DE OPCIONES PARA EL TEST VOCACIONAL ──────────── */
+.test-option {
+  width: 100%;
+  background: #FFFFFF;
+  border: 2px solid #E9D5FF;
+  border-radius: 16px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  outline: none;
+}
+
+.test-option:hover {
+  background: #F5F3FF;
+  border-color: #7C3AED;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.12);
+}
+
+.test-option.selected {
+  background: #F5F3FF;
+  border-color: #7C3AED;
+  box-shadow: 0 4px 18px rgba(124, 58, 237, 0.2);
+}
+
+.radio-circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2.5px solid #CBD5E1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  background: #FFFFFF;
+}
+
+.test-option:hover .radio-circle {
+  border-color: #7C3AED;
+}
+
+.test-option.selected .radio-circle {
+  border-color: #7C3AED;
+  background: #7C3AED;
+}
+
+.test-option.selected .radio-circle::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #FFFFFF;
+}
+
+.option-letter {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #7C3AED;
+  background: #E9D5FF;
+  padding: 4px 10px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.test-option.selected .option-letter {
+  background: #7C3AED;
+  color: #FFFFFF;
+}
+
+.option-text {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  line-height: 1.4;
+  flex: 1;
+}
+
