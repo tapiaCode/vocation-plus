@@ -5,8 +5,8 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   // Mobile Menu Toggle
-  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-  const navLinks = document.querySelector('.nav-links');
+  const mobileMenuBtn = document.querySelector('.home-mobile-toggle, .mobile-menu-btn');
+  const navLinks = document.querySelector('.home-nav, .nav-links');
   
   if (mobileMenuBtn && navLinks) {
     mobileMenuBtn.addEventListener('click', (e) => {
